@@ -27,5 +27,3 @@ if __name__=="__main__":
     audio = AudioFileClip(input_audio_name).subclip(45,52)
     AddSoundEffect(video,audio).write_videofile("SoundEffect.mp4")
     SlowMotion(video).write_videofile("SlowMotion.mp4")
-
-    

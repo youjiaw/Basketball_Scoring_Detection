@@ -21,7 +21,7 @@ MoviePyTest內有範例影片跟音樂
 
 若只是要完成作業那就上傳很多30秒的音樂就好，這樣就不用剪
 ```python
-def AddSoundEffect(video, audio, origin_audio=false):
+    AddSoundEffect(video, audio, origin_audio=false):
 ```
 origin_audio用來選擇是否保留原影片的音軌
 
