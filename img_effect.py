@@ -79,9 +79,7 @@ if __name__=="__main__":
 
    OUTPUT_DIR = '.' + os.sep + 'filter_imgs'
 
-   if not os.path.exists(OUTPUT_DIR):
-      os.makedirs(OUTPUT_DIR)
-   img = cv2.imread('origin.png')
+   img = cv2.imread(OUTPUT_DIR + os.sep + 'origin.png')
    cv2.imwrite(OUTPUT_DIR + os.sep + 'grayscale.png', grayscale(img))
    cv2.imwrite(OUTPUT_DIR + os.sep + 'brighter.png', bright(img, 60))
    cv2.imwrite(OUTPUT_DIR + os.sep + 'sharpen.png', sharpen(img))
