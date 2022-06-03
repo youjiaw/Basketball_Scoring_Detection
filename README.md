@@ -14,14 +14,13 @@ python img_effect.py
 
 MoviePyTest內有範例影片跟音樂
 ```python
-    #!/usr/bin/env python3
-    audio = AudioFileClip(input_audio_name).subclip(45,52)
+audio = AudioFileClip(input_audio_name).subclip(45,52)
 ```
 其中subclip表剪輯音樂，這裡代表剪45秒至52秒的地方
 
 若只是要完成作業那就上傳很多30秒的音樂就好，這樣就不用剪
 ```python
-    AddSoundEffect(video, audio, origin_audio=false):
+AddSoundEffect(video, audio, origin_audio=false):
 ```
 origin_audio用來選擇是否保留原影片的音軌
 
