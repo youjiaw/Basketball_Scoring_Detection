@@ -9,3 +9,10 @@ filter_imgs/origin.png為範例圖片
 ```python
 python img_effect.py
 ```
+
+## edit.py
+MoviePyTest內有範例影片跟音樂
+在此目錄執行edit.py可以看到加上音樂及慢動作兩種結果(同目錄)
+```python
+python edit.py
+```

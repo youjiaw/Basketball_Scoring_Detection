@@ -9,18 +9,18 @@ input_audio_name = "sample.mp3"
 # videoclip2.write_videofile("output.mp4")
 
 def AddSoundEffect(video, audio):
-    return video.set_audio(audio).write_videofile("SoundEffect.mp4")
+    return video.set_audio(audio)
 
 # Default speed = 0.5
 def SlowMotion(video, spd=0.5):
-    return video.fx(vfx.speedx, spd).write_videofile("SlowMotion.mp4")
+    return video.fx(vfx.speedx, spd)
 
 
 if __name__=="__main__":
     
     video = VideoFileClip(input_video_name)
     audio = AudioFileClip(input_audio_name).subclip(45,52)
-    AddSoundEffect(video,audio)
-    SlowMotion(video)
+    AddSoundEffect(video,audio).write_videofile("SoundEffect.mp4")
+    SlowMotion(video).write_videofile("SlowMotion.mp4")
 
     
