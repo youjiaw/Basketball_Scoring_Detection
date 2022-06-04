@@ -1,0 +1,254 @@
+<section class="Card gameModules">
+ <header aria-label="Wednesday, June 8, 2022" class="Card__Header Card__Header--presby">
+  <div class="Card__Header__Title__Wrapper">
+   <h3 class="Card__Header__Title Card__Header__Title--no-theme">
+    Wednesday, June 8, 2022
+   </h3>
+  </div>
+  <div class="Card__Header__SubLink__Wrapper">
+   <div class="Card__Header__SubLink Card__Header__SubLink--presby">
+   </div>
+  </div>
+ </header>
+ <div>
+  <section class="Scoreboard bg-clr-white flex flex-auto justify-between" id="401442532">
+   <div class="Scoreboard__RowContainer flex flex-column flex-auto">
+    <div class="Scoreboard__Row flex w-100 Scoreboard__Row__Main">
+     <div class="Scoreboard__Column flex-auto Scoreboard__Column--1 Scoreboard__Column--Score" style="min-width:320px">
+      <div class="">
+       <div class="ScoreboardScoreCell pa4 nba basketball ScoreboardScoreCell--pre ScoreboardScoreCell--tabletPlus">
+        <div class="ScoreboardScoreCell__Overview flex pb3 w-100">
+         <div class="ScoreCell__Time ScoreboardScoreCell__Time h9 clr-gray-03">
+         </div>
+         <div class="ScoreCell__Network ScoreCell__Network--scoreboard flex justify-end n9">
+          <div class="ScoreCell__NetworkItem">
+           ABC
+          </div>
+         </div>
+         <div class="ScoreboardScoreCell__Headings flex justify-end">
+         </div>
+        </div>
+        <ul class="ScoreboardScoreCell__Competitors">
+         <li class="ScoreboardScoreCell__Item flex items-center relative pb2 ScoreboardScoreCell__Item--away">
+          <a class="AnchorLink" href="/nba/team/_/name/gs/golden-state-warriors" tabindex="0">
+           <img alt="" class="Image Logo ScoreboardScoreCell__Logo mr3 Logo__md" data-mptype="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+          </a>
+          <div class="ScoreCell__Team ScoreCell__Team--scoreboard flex-column pr2">
+           <div class="ScoreCell__Truncate clr-gray-01 ScoreCell__Truncate--scoreboard flex items-center h7 h5">
+            <a class="AnchorLink truncate" href="/nba/team/_/name/gs/golden-state-warriors" tabindex="0">
+             <div class="ScoreCell__TeamName ScoreCell__TeamName--shortDisplayName truncate db">
+              Warriors
+             </div>
+            </a>
+           </div>
+           <div class="ScoreboardScoreCell__RecordContainer n9 clr-gray-05">
+            (
+            <span class="ScoreboardScoreCell__Record">
+             53-29
+            </span>
+            <span class="ScoreboardScoreCell__Record">
+             22-19
+             <span class="ScoreboardScoreCell__Record--homeAway ttc">
+              Away
+             </span>
+            </span>
+            )
+           </div>
+          </div>
+          <div class="ScoreboardScoreCell_Linescores basketball flex justify-end">
+          </div>
+         </li>
+         <li class="ScoreboardScoreCell__Item flex items-center relative pb2 ScoreboardScoreCell__Item--home">
+          <a class="AnchorLink" href="/nba/team/_/name/bos/boston-celtics" tabindex="0">
+           <img alt="" class="Image Logo ScoreboardScoreCell__Logo mr3 Logo__md" data-mptype="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+          </a>
+          <div class="ScoreCell__Team ScoreCell__Team--scoreboard flex-column pr2">
+           <div class="ScoreCell__Truncate clr-gray-01 ScoreCell__Truncate--scoreboard flex items-center h7 h5">
+            <a class="AnchorLink truncate" href="/nba/team/_/name/bos/boston-celtics" tabindex="0">
+             <div class="ScoreCell__TeamName ScoreCell__TeamName--shortDisplayName truncate db">
+              Celtics
+             </div>
+            </a>
+           </div>
+           <div class="ScoreboardScoreCell__RecordContainer n9 clr-gray-05">
+            (
+            <span class="ScoreboardScoreCell__Record">
+             51-31
+            </span>
+            <span class="ScoreboardScoreCell__Record">
+             28-13
+             <span class="ScoreboardScoreCell__Record--homeAway ttc">
+              Home
+             </span>
+            </span>
+            )
+           </div>
+          </div>
+          <div class="ScoreboardScoreCell_Linescores basketball flex justify-end">
+          </div>
+         </li>
+        </ul>
+        <div class="ScoreboardScoreCell__GameInfo">
+         <div class="ScoreboardScoreCell__Note clr-gray-05 n9 w-auto">
+          NBA Finals - Game 3, BOS leads series 1-0
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="Scoreboard__Column ph4 mv4 Scoreboard__Column--2" style="width:220px">
+      <div class="ScoreboardEventInfo">
+       <div class="LocationDetail flex justify-between items-center pb3">
+        <div>
+         <div class="LocationDetail__Item LocationDetail__Item--headline">
+          TD Garden
+         </div>
+         <div class="LocationDetail__Item">
+          Boston, MA
+         </div>
+        </div>
+       </div>
+       <div class="ScoreboardEventInfo__TicketContainer n9 pb3 flex items-center">
+        <a class="AnchorLink flex items-center" href="https://www.vividseats.com/nba-basketball/boston-celtics-tickets/celtics-5-29-3885053.html?wsUser=717&amp;wsVar=us~nba~scoreboard,nba,en" rel="noopener" tabindex="0" target="_blank">
+         <svg aria-hidden="true" class="fill-clr-link pr2 icon__svg" viewbox="0 0 24 24">
+          <use xlink:href="#icon__tickets">
+          </use>
+         </svg>
+         Tickets as low as $729
+        </a>
+       </div>
+       <div class="flex flex-row justify-between">
+        <div class="Odds__Message">
+         Line : BOS -3.5
+         <div class="db">
+          O/U : 215.5
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="Scoreboard__Column ph4 mv4 Scoreboard__Column--3" style="width:230px">
+      <h4 class="clr-gray-05 n8 fw-normal ttu mb3">
+       Players to Watch
+      </h4>
+      <div class="Scoreboard__Performers">
+       <div class="ContentList ContentList--NoBorder" role="list">
+        <div class="ContentList__Item" role="listitem">
+         <a class="Athlete db Athlete__Link clr-gray-01" data-player-uid="" href="/nba/player/_/id/3975/stephen-curry">
+          <div class="flex w-100 items-center">
+           <div class="headshot inline-block relative flex-none mr3 headshot--sm">
+            <figure class="Image aspect-ratio--parent">
+             <div class="RatioFrame aspect-ratio--1x1">
+             </div>
+             <div class="Image__Wrapper aspect-ratio--child">
+              <img alt="S. Curry" class="" data-mptype="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="S. Curry"/>
+             </div>
+            </figure>
+           </div>
+           <div class="Athlete__PlayerWrapper flex justify-center flex-column flex-expand">
+            <h3 class="di flex items-baseline n8">
+             <span class="Athlete__PlayerName">
+              S. Curry
+             </span>
+             <span class="Athlete__NameDetails ml2 clr-gray-04 di ns9">
+              PG
+              <!-- -->
+              - GS
+             </span>
+            </h3>
+            <div class="Athlete__Stats mt2 clr-gray-04 ns9">
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               25.5
+              </span>
+              <span class="Athlete__Stats--label">
+               PPG
+              </span>
+             </div>
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               5.2
+              </span>
+              <span class="Athlete__Stats--label">
+               RPG
+              </span>
+             </div>
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               6.3
+              </span>
+              <span class="Athlete__Stats--label">
+               APG
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="ContentList__Item" role="listitem">
+         <a class="Athlete db Athlete__Link clr-gray-01" data-player-uid="" href="/nba/player/_/id/4065648/jayson-tatum">
+          <div class="flex w-100 items-center">
+           <div class="headshot inline-block relative flex-none mr3 headshot--sm">
+            <figure class="Image aspect-ratio--parent">
+             <div class="RatioFrame aspect-ratio--1x1">
+             </div>
+             <div class="Image__Wrapper aspect-ratio--child">
+              <img alt="J. Tatum" class="" data-mptype="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="J. Tatum"/>
+             </div>
+            </figure>
+           </div>
+           <div class="Athlete__PlayerWrapper flex justify-center flex-column flex-expand">
+            <h3 class="di flex items-baseline n8">
+             <span class="Athlete__PlayerName">
+              J. Tatum
+             </span>
+             <span class="Athlete__NameDetails ml2 clr-gray-04 di ns9">
+              SF
+              <!-- -->
+              - BOS
+             </span>
+            </h3>
+            <div class="Athlete__Stats mt2 clr-gray-04 ns9">
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               26.9
+              </span>
+              <span class="Athlete__Stats--label">
+               PPG
+              </span>
+             </div>
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               8.0
+              </span>
+              <span class="Athlete__Stats--label">
+               RPG
+              </span>
+             </div>
+             <div class="di">
+              <span class="Athlete__Stats--value clr-gray-01 hs9">
+               4.4
+              </span>
+              <span class="Athlete__Stats--label">
+               APG
+              </span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="Scoreboard__Callouts flex items-center mv4 flex-column" style="width:120px">
+    <a class="AnchorLink Button Button--sm Button--anchorLink Button--alt mb4 w-100 mr2" href="/nba/game/_/gameId/401442532" tabindex="0">
+     Gamecast
+    </a>
+   </div>
+  </section>
+ </div>
+</section>
