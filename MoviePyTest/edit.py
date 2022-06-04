@@ -1,4 +1,3 @@
-from sqlalchemy import false
 from moviepy.editor import *
 
 input_video_name = "Fat cat with bread stick.mp4"
@@ -10,7 +9,7 @@ input_audio_name = "sample.mp3"
 # videoclip2.write_videofile("output.mp4")
 
 # Default discard audio of original video
-def AddSoundEffect(video, audio, origin_audio=false):
+def AddSoundEffect(video, audio, origin_audio=False):
     if origin_audio:
         video_audio = video.audio
         audio = CompositeAudioClip([video_audio,audio])
