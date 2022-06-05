@@ -33,3 +33,13 @@ python edit.py
 ```python
 python weather.py
 ```
+
+## future_games_2.py
+取得未來七天的賽程及資訊
+```python
+python future_games_2.py
+```
+執行結果存在NBA_future_game_2目錄
+時間為台灣(UTC+8)時間
+
+有需要甚麼樣的資料再跟我講，現在只是先存成檔案給你們看
