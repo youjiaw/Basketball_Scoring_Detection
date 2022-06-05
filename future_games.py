@@ -41,10 +41,11 @@ def _game_info(input):
     f = input.find("div", class_="ScoreboardScoreCell__Note clr-gray-05 n9 w-auto")
     return f.string
 
-def games_html():
+def games_schedule(days):
     OUTPUT_DIR = '.' + os.sep + 'NBA_FUTURE_GAME' + os.sep
-    central_time = datetime.datetime.now() + datetime.timedelta(hours=-13)
-    for _ in range(7):
+    central_time = datetime.datetime.now() + datetime.timedelta(hours=-12)
+    print('start.....')
+    for _ in range(days):
 
         today = str(central_time.year)+'{:0>2d}'.format(central_time.month)+'{:0>2d}'.format(central_time.day)
         url = f'https://www.espn.com/nba/scoreboard/_/date/{today}'
@@ -57,72 +58,64 @@ def games_html():
         else:
             with open(OUTPUT_DIR + today + '.txt', 'w') as f:
                 date = _game_date(games)
-                print('game date :', date)
+                # print('game date :', date)
                 f.write(date+'\n')
 
                 for game_frag in _all_games_html_frags(games):
                     time = _game_time(game_frag)
-                    print('time:', time)
+                    # print('time:', time)
                     if time!=None:
                         f.write(time+'\n')
 
                     pattern = r'\d+-\d+'
 
-                    print('\n\nGuest:\n')
-                    f.write('\n\nGuest:\n\n')
+                    # print('\n\nGuest:\n')
+                    f.write('Guest:\n')
                     guest_f = _guest_html_frag(game_frag)
 
                     team_name = _team_name(guest_f)
-                    print(team_name)
+                    # print(team_name)
                     f.write(team_name+'\n')
-                    # print('\t', end='')
-                    # for info in _team_info(guest_f):
-                    #     print(info, end=' ')
-
-                    # print()
 
 
                     f_list = _team_info(guest_f)
-                    print(f_list[0].string)
+                    # print(f_list[0].string)
                     f.write(f_list[0].string+'\n')
 
                     re_result = re.search(pattern, str(f_list[1])).group(0)
-                    print(re_result)
+                    # print(re_result)
                     f.write(re_result+'\n')
                     # print(f_list)
 
-                    print('\n\nHome:\n')
-                    f.write('\n\nHome:\n\n')
+                    # print('\n\nHome:\n')
+                    f.write('Home:\n')
                     home_f = _home_html_frag(game_frag)
 
                     team_name = _team_name(home_f)
-                    print(team_name)
+                    # print(team_name)
                     f.write(team_name+'\n')
-                    # print('\t', end='')
-                    # for info in _team_info(home_f):
-                    #     print(info, end=' ')
-
-                    # print()
 
                     f_list = _team_info(home_f)
-                    print(f_list[0].string)
+                    # print(f_list[0].string)
                     f.write(f_list[0].string+'\n')
 
                     re_result = re.search(pattern, str(f_list[1])).group(0)
                     
-                    print(re_result)
+                    # print(re_result)
                     f.write(re_result+'\n')
                     # print(f_list)
                     
                     
                     game_info = _game_info(game_frag)
-                    print('\n\n'+game_info+'\n\n\n')
-                    f.write('\n\n'+game_info+'\n\n\n\n')
+                    # print('\n\n'+game_info+'\n\n\n')
+                    f.write(game_info+'\n')
 
 
         central_time += datetime.timedelta(days=1)
         
 
+    print('done.....')
+
 
 if __name__=='__main__':
-    games_html()
+    games_schedule(7)
