@@ -42,7 +42,7 @@ def _game_info(input):
     return f.string
 
 def games_schedule(days):
-    OUTPUT_DIR = '.' + os.sep + 'NBA_FUTURE_GAME' + os.sep
+    OUTPUT_DIR = '.' + os.sep + 'NBA_future_game' + os.sep
     central_time = datetime.datetime.now() + datetime.timedelta(hours=-12)
     print('start.....')
     for _ in range(days):
