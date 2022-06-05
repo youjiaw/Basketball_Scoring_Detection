@@ -116,8 +116,8 @@ def games_html():
                     
                     
                     game_info = _game_info(game_frag)
-                    print('\n\n'+game_info)
-                    f.write('\n\n'+game_info)
+                    print('\n\n'+game_info+'\n\n\n')
+                    f.write('\n\n'+game_info+'\n\n\n\n')
 
 
         central_time += datetime.timedelta(days=1)
