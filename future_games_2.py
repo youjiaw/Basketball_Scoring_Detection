@@ -10,6 +10,9 @@ def get_NBA_schedule(year):
     r = requests.get('https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/' + year + '/league/00_full_schedule.json')
     json_data = r.json()
 
+    with open('NBA_future_game_2'+os.sep+'2021AllGames.json', 'w') as f:
+        json.dump(json_data, f)
+
     # prepare output files
     with open("NBA_future_game_2"+os.sep+"filtered_schedule.csv", "w") as fout:
 

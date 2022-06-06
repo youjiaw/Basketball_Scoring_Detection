@@ -48,9 +48,15 @@ python weather.py
 ## future_games_2.py
 取得未來七天的賽程及資訊
 
+資料來源: https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/{year}/league/00_full_schedule.json
+
+year為賽季開始的年份
+
+例如現在的賽季為2021年度: https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2021/league/00_full_schedule.json
+
+
 function用法:
-* get_NBA_schedule(year): year為賽季開始的年份
-例如現在的賽季為2021年度
+* get_NBA_schedule(year)
 ```python
 get_NBA_schedule('2021')
 ```
@@ -60,7 +66,9 @@ get_NBA_schedule('2021')
 python future_games_2.py
 ```
 執行結果存在NBA_future_game_2目錄
-時間為台灣(UTC+8)時間
+
+包含來源json檔以及七天內的比賽(csv檔) 時間為台灣(UTC+8)時間
+
 
 
 # 網頁操作說明
