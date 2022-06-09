@@ -21,20 +21,24 @@ def get_NBA_schedule(year):
         fout.writelines('GameDate, Time, Status, Visitor, Visit W-L Record, '
                         'Home, Home W-L Record, Seri, City, State')
 
-        current_dt = datetime.datetime.now() 
+        current_dt = datetime.datetime.now()
 
         time_delta = datetime.timedelta(hours=8)
 
+        hasGame = True
         # loop through each month/game and write out stats to file
-        for i in range(len(json_data['lscd'])):
-            for j in range(len(json_data['lscd'][i]['mscd']['g'])):
-                # gamedate = json_data['lscd'][i]['mscd']['g'][j]['gdte']
-                date_utc = json_data['lscd'][i]['mscd']['g'][j]['gdtutc']
-                # gamedate_dt = datetime.datetime.strptime(gamedate, "%Y-%m-%d")
-                time_utc = json_data['lscd'][i]['mscd']['g'][j]['utctm']
-
+        for month_games in json_data['lscd']:
+            if month_games['mscd']['mon']==current_dt.strftime("%B"):
+                break
+        else:
+            print('no game')
+            hasGame = False
+        
+        if hasGame:
+            for game in month_games['mscd']['g']:
+                date_utc = game['gdtutc']
+                time_utc = game['utctm']
                 date_time_dt = datetime.datetime.strptime(date_utc+'-'+time_utc, "%Y-%m-%d-%H:%M") + time_delta
-                
                 if (date_time_dt - current_dt).days < 0 or (date_time_dt - current_dt).days >= 7:
                     continue
 
@@ -45,21 +49,18 @@ def get_NBA_schedule(year):
 
                 
 
-                # game_id = json_data['lscd'][i]['mscd']['g'][j]['gid']
-                game_status = json_data['lscd'][i]['mscd']['g'][j]['stt']
+                game_status = game['stt']
 
-                visiting_team = json_data['lscd'][i]['mscd']['g'][j]['v']['ta']
-                # vscore = json_data['lscd'][i]['mscd']['g'][j]['v']['s']
-                vteam_record = json_data['lscd'][i]['mscd']['g'][j]['v']['re']
+                visiting_team = game['v']['ta']
+                vteam_record = game['v']['re']
 
-                home_team = json_data['lscd'][i]['mscd']['g'][j]['h']['ta']
-                # hscore = json_data['lscd'][i]['mscd']['g'][j]['h']['s']
-                hteam_record = json_data['lscd'][i]['mscd']['g'][j]['h']['re']
+                home_team = game['h']['ta']
+                hteam_record = game['h']['re']
 
-                seri = json_data['lscd'][i]['mscd']['g'][j]['seri']
+                seri = game['seri']
 
-                arena_city = json_data['lscd'][i]['mscd']['g'][j]['ac']
-                arena_state = json_data['lscd'][i]['mscd']['g'][j]['as']
+                arena_city = game['ac']
+                arena_state = game['as']
                 
 
 
@@ -68,13 +69,7 @@ def get_NBA_schedule(year):
                             + ','+ vteam_record+','+ home_team + ','+ hteam_record
                             +','+ seri +','+ arena_city +','+ arena_state)
 
-                # don't access scores for games that haven't been played yet
-                # if(gamedate_dt < current_dt):  
-                #     home_team_won = json_data['lscd'][i]['mscd']['g'][j]['h']['s'] > json_data['lscd'][i]['mscd']['g'][j]['v']['s']
-                #     fout.write(','+ str(home_team_won))
-
-                
-        # fout.close()
+        
         r.close()
 
 if __name__=='__main__':
