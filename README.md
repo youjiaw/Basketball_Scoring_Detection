@@ -74,6 +74,6 @@ get_NBA_schedule('2021')
 
 result
 
-![img](NBA_future_game_2\result.png)
+![img](./NBA_future_game_2/result.png)
 
 # 網頁操作說明
