@@ -25,11 +25,13 @@ python img_effect.py
 
 MoviePyTest內有範例影片跟音樂
 ```python
-audio = AudioFileClip(input_audio_name).subclip(45,52)
+audio = AudioFileClip(input_audio_name)
 ```
-其中subclip表剪輯音樂，這裡代表剪45秒至52秒的地方
+提供五首30秒音樂供使用者選擇，修改音樂檔名即可使用
+```python
+input_audio_name = "Run The Clock.mp3"
+```
 
-若只是要完成作業那就上傳很多30秒的音樂就好，這樣就不用剪
 ```python
 AddSoundEffect(video, audio, origin_audio=false):
 ```

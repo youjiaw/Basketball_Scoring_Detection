@@ -1,7 +1,7 @@
 from moviepy.editor import *
 
 input_video_name = "Fat cat with bread stick.mp4"
-input_audio_name = "sample.mp3"
+input_audio_name = "Run The Clock.mp3"
 
 # Default discard audio of original video
 def AddSoundEffect(video, audio, origin_audio=False):
@@ -18,6 +18,6 @@ def SlowMotion(video, spd=0.5):
 if __name__=="__main__":
     
     video = VideoFileClip(input_video_name)
-    audio = AudioFileClip(input_audio_name).subclip(45,52)
+    audio = AudioFileClip(input_audio_name)
     AddSoundEffect(video,audio).write_videofile("SoundEffect.mp4")
     SlowMotion(video).write_videofile("SlowMotion.mp4")
