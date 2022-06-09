@@ -56,19 +56,22 @@ year為賽季開始的年份
 
 
 function用法:
-* get_NBA_schedule(year)
+* get_NBA_schedule(year) -> return **list** of (date,
+                                                time,
+                                                game_status,
+                                                visiting_team,
+                                                vteam_record,
+                                                home_team,
+                                                hteam_record,
+                                                seri,
+                                                arena_city,
+                                                arena_state)
 ```python
 get_NBA_schedule('2021')
 ```
 
-或著直接執行此程式 : 
-```python
-python future_games_2.py
-```
-執行結果存在NBA_future_game_2目錄
+result
 
-包含來源json檔以及七天內的比賽(csv檔) 時間為台灣(UTC+8)時間
-
-
+![result](NBA_future_game_2\result.png)
 
 # 網頁操作說明
