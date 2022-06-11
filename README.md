@@ -11,43 +11,18 @@
 # 設計原理
 
 # 程式碼說明
-## img_effect.py
+## 進球判斷
 
-每個函式代表不同的濾鏡
+## 網頁程式碼說明
 
-filter_imgs/origin.png為範例圖片
-執行img_effect.py可以看到各種濾鏡的結果(同目錄)
-```python
-python img_effect.py
-```
-
-## edit.py
-
-MoviePyTest內有範例影片跟音樂
-```python
-audio = AudioFileClip(input_audio_name)
-```
-提供五首30秒音樂供使用者選擇，修改音樂檔名即可使用
-```python
-input_audio_name = "Run The Clock.mp3"
-```
-
-```python
-AddSoundEffect(video, audio, origin_audio=false):
-```
-origin_audio用來選擇是否保留原影片的音軌
-
-在此目錄執行edit.py可以看到加上音樂及慢動作兩種結果(同目錄)
-```python
-python edit.py
-```
-## weather.py
+### 首頁
+#### weather.py
 用來取得未來八小時的天氣預報 
 ```python
 python weather.py
 ```
 
-## future_games_2.py
+#### future_games_2.py
 取得未來七天的賽程及資訊
 
 資料來源: https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/{year}/league/00_full_schedule.json
@@ -75,5 +50,40 @@ get_NBA_schedule('2021')
 result
 
 ![img](./NBA_future_game_2/result.png)
+
+
+### 上傳頁面
+#### edit.py
+
+MoviePyTest內有範例影片跟音樂
+```python
+audio = AudioFileClip(input_audio_name)
+```
+提供五首30秒音樂供使用者選擇，修改音樂檔名即可使用
+```python
+input_audio_name = "Run The Clock.mp3"
+```
+
+```python
+AddSoundEffect(video, audio, origin_audio=false):
+```
+origin_audio用來選擇是否保留原影片的音軌
+
+在此目錄執行edit.py可以看到加上音樂及慢動作兩種結果(同目錄)
+```python
+python edit.py
+```
+#### img_effect.py
+
+每個函式代表不同的濾鏡
+
+filter_imgs/origin.png為範例圖片
+執行img_effect.py可以看到各種濾鏡的結果(同目錄)
+```python
+python img_effect.py
+```
+
+### 能力追蹤
+
 
 # 網頁操作說明
