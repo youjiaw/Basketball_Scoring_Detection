@@ -53,6 +53,14 @@ result
 
 
 ### 上傳頁面
+#### final.py
+
+利用YOLOv4模型判斷影片中的是否有進球，並將進球片段擷取出來。
+
+```python
+python final.py
+```
+
 #### edit.py
 
 MoviePyTest內有範例影片跟音樂
