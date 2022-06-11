@@ -56,9 +56,11 @@ def get_NBA_schedule(year):
             game_status = game['stt']
 
             visiting_team = game['v']['ta']
+            vteam_fullName = game['v']['tn']
             vteam_record = game['v']['re']
 
             home_team = game['h']['ta']
+            hteam_fullName = game['h']['tn']
             hteam_record = game['h']['re']
 
             seri = game['seri']
@@ -76,8 +78,10 @@ def get_NBA_schedule(year):
                            time,
                            game_status,
                            visiting_team,
+                           vteam_fullName,
                            vteam_record,
                            home_team,
+                           hteam_fullName,
                            hteam_record,
                            seri,
                            arena_city,
