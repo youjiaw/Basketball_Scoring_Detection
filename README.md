@@ -42,7 +42,7 @@ origin_audio用來選擇是否保留原影片的音軌
 python edit.py
 ```
 ## weather.py
-用來取得未來八小時的天氣預報 
+用來取得未來八小時的天氣預報
 ```python
 python weather.py
 ```
