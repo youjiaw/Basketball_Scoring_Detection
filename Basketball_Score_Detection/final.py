@@ -4,7 +4,7 @@ import sys
 import traceback
 import os
 import tqdm
-
+ 
 # ----------modify input video here----------
 input_video_dir = ""
 video_name = "" + ".mp4"
