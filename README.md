@@ -150,6 +150,12 @@ source VENV/bin/activate
 pip install -r requirements.txt
 ```
 
+如果過程有報錯，可以嘗試使用conda下載
+
+```bash
+conda install ...
+```
+
 最後進入網頁的資料夾，輸入以下指令以啟動server，完成後前往顯示的網站連結即可
 
 ```python
@@ -158,5 +164,15 @@ python3 manage.py migrate
 #啟動surver
 python3 manage.py runserver
 ```
+
+如果啟動後有cannot import ... 的報錯（requirements.txt裡下載的套件）
+
+可以試看看重新下載一次該套件
+
+```python
+pip uninstall ...
+pip install ...
+```
+
 
 ## 網頁執行步驟
