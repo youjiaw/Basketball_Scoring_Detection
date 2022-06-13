@@ -16,7 +16,13 @@
 
 利用YOLOv4模型進行辨識，在判斷影片中的是否有進球後，將進球片段擷取出來。
 
-要執行此檔案需要下載requirements.txt，先創建一個python3.6的環境，進入環境後執行以下指令。
+要執行此檔案需要先創建一個python3.6的環境
+
+```bash
+conda create --name (your env name) python=3.6
+```
+
+進入環境後執行以下指令下載requirements.txt
 
 （執行網頁程式碼也需要此環境）
 
