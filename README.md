@@ -197,3 +197,7 @@ python3 manage.py runserver
 pip uninstall ...
 pip install ...
 ```
+## 網頁操作說明
+* 參考demo影片，影片網址:
+* 注意事項
+  * 註冊完如果沒收到信，可以去垃圾郵件的地方看看 
