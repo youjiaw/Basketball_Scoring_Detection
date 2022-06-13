@@ -26,7 +26,7 @@
 # 設計原理
 ## 系統模型
 所提方法的架構圖如下
-
+<img width="1180" alt="image" src="https://user-images.githubusercontent.com/92151140/173359238-2b218262-b7e7-462b-b8a8-96640643f02a.png">
 接下來會依序說明各步驟
 * 物件辨識模型 (用來辨識籃球與籃框)
   * 採用YOLOv4
