@@ -16,7 +16,17 @@
 
 利用YOLOv4模型進行辨識，在判斷影片中的是否有進球後，將進球片段擷取出來。
 
-須先下載model_datas到與final.py的同目錄下，並更改final.py第9、10行的影片輸入位置和名稱，及第13行的精華片段輸出位置，完成後即可使用。
+要執行此檔案需要先下載requirements.txt，先創建一個python3.6的環境，進入環境後執行。
+
+（執行網頁程式碼也需要此環境）
+
+要執行此檔案需要先下載requirements.txt，先創建一個python3.6的環境，進入環境後執行。
+
+```python
+pip install -r requirements.txt
+```
+
+隨後下載model_datas到與final.py的同目錄下，並更改final.py第9、10行的影片輸入位置和名稱，及第13行的精華片段輸出位置，完成後即可使用。
 
 ```python
 python final.py
