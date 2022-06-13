@@ -41,6 +41,36 @@ python final.py
 
 ## 網頁程式碼說明
 
+執行網站需要linux系統，並創建虛擬環境
+
+```bash
+#安裝pip3
+sudo apt-get -y install python3-pip
+#安裝virtualenv
+sudo pip install virtualenv
+```
+
+在目的資料夾中使用virtualenv建立一個虛擬環境，並安裝Django
+
+```bash
+#建立虛擬環境
+virtualenv VENV
+#進入虛擬環境
+source VENV/bin/activate
+#安裝Django
+(VENV) $ pip install django
+```
+
+接著進入網頁的資料夾，啟動server後前往顯示的網站連結即可。
+
+```python
+python3 manage.py makemigrations
+python3 manage.py migrate
+#啟動surver
+python3 manage.py runserver
+```
+
+
 ### 首頁
 #### weather.py
 用來取得未來八小時的天氣預報 
