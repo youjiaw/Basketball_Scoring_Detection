@@ -174,10 +174,11 @@ source VENV/bin/activate
 pip install -r requirements.txt
 ```
 
-如果過程有報錯，可以嘗試使用conda下載
+如果過程有報錯，可以嘗試使用conda下載，其中如果mysqlclient有報錯，需請嘗試執行第二行指令
 
 ```bash
 conda install ...
+conda install MySQLClient
 ```
 
 最後下載bballApp的資料夾，進入裡面後，輸入以下指令以啟動server，完成後前往顯示的網站連結即可
