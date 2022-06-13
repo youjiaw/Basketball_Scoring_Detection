@@ -47,7 +47,7 @@
  ## 網頁架構
 我們的網頁主要是依據下圖的functional map做設計
 <img width="903" alt="image" src="https://user-images.githubusercontent.com/92151140/173358558-a11d7dc9-9d9f-44ad-8cec-17edb8518364.png">
-
+而網頁的架設是使用Django
 # 程式碼說明
 ## 進球判斷程式碼說明
 #### final.py
