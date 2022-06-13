@@ -4,7 +4,7 @@ import socket
 from datetime import datetime
 
 url = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=CWB-A89DDEBE-215B-4AE4-AA1B-7A7F52C58235&downloadType=WEB&format=JSON'
-pm_url = 'https://data.epa.gov.tw/api/v2/aqx_p_02?api_key=fdac918f-b34b-4dd6-94b2-338ea65d1a3f&format=json'
+pm_url = 'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=fdac918f-b34b-4dd6-94b2-338ea65d1a3f&format=json'
 target_country = "臺中市"
 # import geoip2.database
 #
@@ -57,10 +57,10 @@ def getPM2dot5(pm_url):
     if not records:
         return msg, now
     for i in records:
-        site = i['site']
+        site = i['sitename']
         county = i['county']
-        pm25 = i['pm25']
-        time = i['datacreationdate']
+        pm25 = i['pm2.5']
+        time = i['publishtime']
     #     if county == target_country:
     #         site_list.append(site)
     #         pm25_list.append(pm25)
