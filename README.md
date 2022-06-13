@@ -35,7 +35,6 @@ pip install -r requirements.txt
 ```python
 python final.py
 ```
-<<<<<<< HEAD
 ## weather.py
 用來取得未來八小時的天氣預報
 =======
@@ -45,7 +44,7 @@ python final.py
 ### 首頁
 #### weather.py
 用來取得未來八小時的天氣預報 
->>>>>>> 860c5736083e66f8a0eef4b8e987b7f83242113c
+
 ```python
 python weather.py
 ```
