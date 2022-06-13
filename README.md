@@ -5,8 +5,23 @@
 除此之外，我們也發現到近年來由於新冠病毒的肆虐，大大改變了民眾的運動模式。根據教育部體育署的調查，在家運動的比例（15.3%）較109年（9.0%）大幅增加6.3%，同時為了不群聚打球，熱愛籃球的民眾們只能個別練習相關的訓練動作，對於打球的熱忱往往大不如前，運動頻率隨之下降。因此，我們希望建構一個智慧籃球運動的程式，讓使用者能夠記錄與監測自己的運動狀況，並透過與其他使用者互動、比較的方式，在疫情期間也可以提升打球的動力，讓他們重拾運動熱忱同時提高個人的免疫力。
 
 # 相關研究
-欲判斷是否進球，最直覺的方法是透過籃球是否通過籃筐的位置來判定，此方法雖簡單明瞭，但此方法問題在於，觀賞者所獲取的籃球影片，通常不會同時提供兩種以上的視角，因此若單以拍攝影片之鏡頭視角來判斷，可能會發生籃球與籃筐位置確實重疊，但籃球卻未真正進入籃筐的情況，將會造成判斷錯誤的問題。以下是我們找到的相關研究:  
-
+欲判斷是否進球，最直覺的方法是透過籃球是否通過籃筐的位置來判定，此方法雖簡單明瞭，但此方法問題在於，觀賞者所獲取的籃球影片，通常不會同時提供兩種以上的視角，因此若單以拍攝影片之鏡頭視角來判斷，可能會發生籃球與籃筐位置確實重疊，但籃球卻未真正進入籃筐的情況，將會造成判斷錯誤的問題。  
+因此在這次專題中，需要解決
+1. 辨識籃球和藍筐  
+2. 確認是否進球  
+這兩項問題，以下是我們找到的相關研究:  
+* 參考文獻[1] Ratgeber, L., Ivankovic, Z., Gojkovic, Z., Milosevic, Z., Markoski, B., & Kostic–Zobenica, A. (2019). Video Mining in Basketball Shot and Game Analysis. Acta Polytechnica Hungarica, 16(1), 7-27.  
+利用將畫面轉換成HSV顏色模型的方式辨識籃球和籃筐，並依照籃球在通過籃筐上方區域後是否通過籃框下方區域來決定是否進球。
+  * 優點:每秒減少2/3的畫面使用來提高辨識速度而不影響準確度，因為利用球是否通過籃筐上方與下方作為判斷依據，這件事的發生不會快到以至於在減少的畫面集合中沒有被記錄下來
+  * 缺點:籃球到籃筐下方區域時，可能會受到球員的干擾而影響判定結果，且此方法無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
+* 參考文獻[2] Fu, X. B., Yue, S. L., & Pan, D. Y. (2021). Camera-based basketball scoring detection using convolutional neural network. International Journal of Automation and Computing, 18(2), 266-276.  
+利用YOLO模型判斷出籃筐位置，並利用圖像差分找出移動中的物體，最後依照此物體是否有通過籃筐位置來判斷是否進球。
+  * 優點:只要籃球有通過籃筐範圍就會被判斷成有進球，所以進球一定會被判斷出來
+  * 缺點:無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
+* 參考文獻[3] Huang, C. L., Shih, H. C., & Chen, C. L. (2006, July). Shot and scoring events identification of basketball videos. In 2006 IEEE International Conference on Multimedia and Expo (pp. 1885-1888). IEEE.  
+用SVM(Support Vector Machine)來辨識籃球與籃筐，並將籃球依照是否被籃網覆蓋區分為在籃筐內、在籃筐外兩種類別。
+  * 優點:可以在籃球和籃筐重疊時分辨出籃球是否在籃筐內
+  * 缺點:過程中每一幀畫面都要判斷SVM的分數以確定籃球和籃筐的位置，故處理影片的速度較慢。  
 
 # 設計原理
 
@@ -35,9 +50,6 @@ pip install -r requirements.txt
 ```python
 python final.py
 ```
-## weather.py
-用來取得未來八小時的天氣預報
-=======
 
 ## 網頁程式碼說明
 
@@ -114,5 +126,39 @@ python img_effect.py
 
 
 # 網頁操作說明
+## 如何進入網頁
+執行網站需要linux系統，並創建虛擬環境
+
+```bash
+#安裝pip3
+sudo apt-get -y install python3-pip
+#安裝virtualenv
+sudo pip3 install virtualenv
+```
+
+在目的資料夾中使用virtualenv建立一個虛擬環境，並安裝Django
+
+```bash
+#建立虛擬環境
+virtualenv VENV
+#進入虛擬環境
+source VENV/bin/activate
+#安裝Django
+(VENV) $ pip install django
+```
+接著下載兩份requirements.txt，第二份在Basketball_Scoring_Detection資料夾裡，
+
+```bash
+pip install -r requirements.txt
+```
+
+最後進入網頁的資料夾，啟動server後前往顯示的網站連結即可。
+
+```python
+python3 manage.py makemigrations
+python3 manage.py migrate
+#啟動surver
+python3 manage.py runserver
+```
 
 ## 網頁執行步驟
