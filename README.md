@@ -156,7 +156,7 @@ pip install -r requirements.txt
 conda install ...
 ```
 
-最後進入網頁的資料夾，輸入以下指令以啟動server，完成後前往顯示的網站連結即可
+最後進入bballApp的資料夾，輸入以下指令以啟動server，完成後前往顯示的網站連結即可
 
 ```python
 python3 manage.py makemigrations
