@@ -20,9 +20,7 @@
 
 （執行網頁程式碼也需要此環境）
 
-要執行此檔案需要先下載requirements.txt，先創建一個python3.6的環境，進入環境後執行。
-
-```python
+```bash
 pip install -r requirements.txt
 ```
 
