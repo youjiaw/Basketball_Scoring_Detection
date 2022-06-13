@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %}</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <div class="row">
+		<div class="col-md-6" align="left">
+			&emsp;&emsp;<a href="/"><img src="/static/images/logo.png" align="left" width="200" style="margin: 20px;" border="0"></a>
+		</div>
+		<div class="col-md-6" align="right">
+			<img src="{% static '/images/member.png' %}" height="60">
+			<a href="/logout"><img src="{% static '/images/logout_btn.png' %}" height="50" style="margin:10px"></a>&emsp;
+		</div>
+	</div>
+	<div align="center">{% block headline %}{% endblock %}</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" align="left">
+				{% block left_btn %}{% endblock %}
+			</div>
+			{% block choice %}{% endblock %}
+			{% block right_btn %}{% endblock %}
+		</div>
+	</div>
+	<br>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="border-style: solid; border-width: 2px; border-radius: 10px; border-color: black;">
+				<div panel panel-default>
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

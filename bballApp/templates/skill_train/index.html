@@ -1,0 +1,60 @@
+{% extends 'skill_train/base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" align="center">
+				<h2>選擇影片類型</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3" align="center">
+				{% if no == 0 %}
+					<a href="{% url 'vd-url' 1 %}"><img src="{% static 'images/game_1.png' %}" height="50"></a>&emsp;&emsp;&emsp;&emsp;
+					<a href="{% url 'vd-url' 2 %}"><img src="{% static 'images/self_training_1.png' %}" height="50"></a>
+				{% elif no == 1 %}
+					<a href="{% url 'vd-url' 1 %}"><img src="{% static 'images/game_2.png' %}" height="50"></a>&emsp;&emsp;&emsp;&emsp;
+					<a href="{% url 'vd-url' 2 %}"><img src="{% static 'images/self_training_1.png' %}" height="50"></a>
+				{% elif no == 2%}
+					<a href="{% url 'vd-url' 1 %}"><img src="{% static 'images/game_1.png' %}" height="50"></a>&emsp;&emsp;&emsp;&emsp;
+					<a href="{% url 'vd-url' 2 %}"><img src="{% static 'images/self_training_2.png' %}" height="50"></a>
+				{% endif %}
+			</div>
+			<div class="col-md-3" align="right">
+				<a href="/tracking"><img src="{% static 'images/track.png' %}" width="200"></a>
+			</div>
+		</div>
+		<br>
+		{% for message in messages %}
+			<div class="alert alert-{{message.tags}}">{{message}}</div>
+		{% endfor %}
+		<div class="row" align="center">
+			<!-- <div class="col-md-4">
+			</div> -->
+			<!-- <div class="col-md-4" align="center"> -->
+				<div class="panel panel-primary" style="width: 500px;height: 300px;display: table-cell;vertical-align: middle;" align="center">
+
+					<form action='' method="POST" enctype="multipart/form-data">
+					    {% csrf_token %}
+					    <br>
+
+					    <div class="fileUpload btn btn-primary">
+					    	<img src="{% static 'images/upload_file.png' %}" align="left" width="50">
+						    <span style="font-size:35px;">上傳影片</span>
+						    <input id="uploadBtn" type="file" class="upload" name="file"/>
+						</div>
+						<p align="center">點擊或拖曳影片至上方按鈕</p>
+						<br>
+						Choosed File : 
+						<input id="uploadFile" disabled="disabled"/><br>
+					    <br>
+					    <input type=submit name="send" value="確認上傳"><br>
+
+					</form>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+{% endblock%}

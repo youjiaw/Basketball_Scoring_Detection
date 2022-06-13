@@ -1,0 +1,5 @@
+感謝您的註冊
+使用者: {{ user }}
+在網站: {{ site }} 註冊
+請點選以下連結啟用帳號: http://{{site}}/accounts/activate/{{activation_key}}
+將於 {{expiration_days}} 天後到期

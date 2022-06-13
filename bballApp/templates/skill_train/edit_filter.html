@@ -1,0 +1,142 @@
+{% extends 'skill_train/base.html' %}
+{% load static %}
+
+{% block content %}
+	<br>
+	<div class="container">
+		<div class="row" align="center">
+			<div class="col-md-6 col-md-offset-3" align="center">
+				{% if f == 0 %}
+					<img src="/media/filter_imgs/origin.png" width="550">
+				{% else %}
+					<img src="/media/filter_imgs/filtered.png" width="550">
+				{% endif %}
+
+			</div>
+			
+			<div class="col-md-3" align="right">
+					<!-- <a href=""><img src="{% static 'images/edit_2.png' %}" width="150"></a> -->
+					<!-- <br><br> -->
+					<a href='./filter_process/'><img src="{% static 'images/make_video.png' %}" width="200"></a><br>
+					<br><br><br><br><br><br><br><br><br><br><br>
+					<div align="left">
+						{% if s == 1 %}
+							<a href="../../../0/{{f}}/{{m}}/"><img src="{% static 'images/slow_2.png' %}" height="40"></a>
+						{% else %}
+							<a href="../../../1/{{f}}/{{m}}/"><img src="{% static 'images/slow_1.png' %}" height="40"></a>
+						{% endif %}
+					</div>
+					
+
+			</div>
+
+		</div>
+		<br>
+		<div class="row" align="center">
+			<div class="col-md-2" align="right">
+				<br>
+				<img src="{% static 'images/filter.png' %}" height="80">
+				<br><br>
+				<img src="{% static 'images/music.png' %}" height="80">
+			</div>
+			<!-- <img src="{% static 'images/filter.png' %}" height="100"> -->
+			<div class="col-md-10" align="left">
+				<div class="row">
+					{% if f == 1 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_1_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../1/{{m}}/"><img src="{% static 'images/filter_1_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 2 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_2_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../2/{{m}}/"><img src="{% static 'images/filter_2_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 3 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_3_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../3/{{m}}/"><img src="{% static 'images/filter_3_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 4 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_4_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../4/{{m}}/"><img src="{% static 'images/filter_4_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 5 %}
+						<a href="../../5/{{m}}/"><img src="{% static 'images/filter_5_2.png' %}" height="40"></a>
+					{% else %}
+						<a href="../../5/{{m}}/"><img src="{% static 'images/filter_5_1.png' %}" height="40"></a>&emsp;{% endif %}
+				</div>
+				<br>
+				<div class="row">
+					{% if f == 6 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_6_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../6/{{m}}/"><img src="{% static 'images/filter_6_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 7 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_7_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../7/{{m}}/"><img src="{% static 'images/filter_7_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 8 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_8_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../8/{{m}}/"><img src="{% static 'images/filter_8_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 9 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_9_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../../9/{{m}}/"><img src="{% static 'images/filter_9_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if f == 10 %}
+						<a href="../../0/{{m}}/"><img src="{% static 'images/filter_10_2.png' %}" height="40"></a>
+					{% else %}
+						<a href="../../10/{{m}}/"><img src="{% static 'images/filter_10_1.png' %}" height="40"></a>&emsp;{% endif %}
+				</div>
+				<br><br>
+				<div class="row">
+					{% if m == 1 %}
+						<a href="../0/"><img src="{% static 'images/music_1_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../1/"><img src="{% static 'images/music_1_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if m == 2 %}
+						<a href="../0/"><img src="{% static 'images/music_2_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../2/"><img src="{% static 'images/music_2_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if m == 3 %}
+						<a href="../0/"><img src="{% static 'images/music_3_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../3/"><img src="{% static 'images/music_3_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if m == 4 %}
+						<a href="../0/"><img src="{% static 'images/music_4_2.png' %}" height="40"></a>&emsp;
+					{% else %}
+						<a href="../4/"><img src="{% static 'images/music_4_1.png' %}" height="40"></a>&emsp;{% endif %}
+					{% if m == 5 %}
+						<a href="../0/"><img src="{% static 'images/music_5_2.png' %}" height="40"></a>
+					{% else %}
+						<a href="../5/"><img src="{% static 'images/music_5_1.png' %}" height="40"></a>&emsp;{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div align="center">
+			<!-- {% if s == 1 %}
+				<a href="../../../0/{{f}}/{{m}}/"><img src="{% static 'images/slow_2.png' %}" height="40"></a>
+			{% else %}
+				<a href="../../../1/{{f}}/{{m}}/"><img src="{% static 'images/slow_1.png' %}" height="40"></a>
+			{% endif %} -->
+		</div>
+
+		{% if m != 0 %}
+			<audio autoplay>
+				{% if m == 1 %}
+					<source src="{% static 'music/1.mp3' %}" type="audio/mpeg">
+				{% elif m == 2 %}
+					<source src="{% static 'music/2.mp3' %}" type="audio/mpeg">
+				{% elif m == 3 %}
+					<source src="{% static 'music/3.mp3' %}" type="audio/mpeg">
+				{% elif m == 4 %}
+					<source src="{% static 'music/4.mp3' %}" type="audio/mpeg">
+				{% elif m == 5 %}
+					<source src="{% static 'music/5.mp3' %}" type="audio/mpeg">
+				{% endif %}
+			</audio>
+		{% endif %}
+
+		<br>
+
+	</div>
+{% endblock %}

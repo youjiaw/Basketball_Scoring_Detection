@@ -1,0 +1,116 @@
+{% extends 'tracking_base.html' %}
+{% load static %}
+{% block title %}與其他使用者比較{% endblock %}
+{% block headline %}
+	<img src="/static/images/compare.png" align="center" height="100" border="0">
+{% endblock %}
+{% block left_btn %}
+	<a href="/tracking"><img src="/static/images/tracking_btn.png" align="left" height="50" style="margin: 10px;"></a>
+{% endblock %}
+{% block choice %}
+	<div class="col-md-6" align="center">
+		<br>
+		{% if no == 0 %}
+			<a href="{% url 'compare-url' 1 %}"><img src="{% static '/images/compare_acc_1.png' %}" height="50"></a>&emsp;&emsp;&emsp;
+			<a href="{% url 'compare-url' 2 %}"><img src="{% static '/images/compare_days_1.png' %}" height="50"></a>
+		{% elif no == 1 %}
+			<a href="{% url 'compare-url' 1 %}"><img src="{% static '/images/compare_acc_2.png' %}" height="50"></a>&emsp;&emsp;&emsp;
+			<a href="{% url 'compare-url' 2 %}"><img src="{% static '/images/compare_days_1.png' %}" height="50"></a>
+		{% elif no == 2 %}
+			<a href="{% url 'compare-url' 1 %}"><img src="{% static '/images/compare_acc_1.png' %}" height="50"></a>&emsp;&emsp;&emsp;
+			<a href="{% url 'compare-url' 2 %}"><img src="{% static '/images/compare_days_2.png' %}" height="50"></a>
+		{% endif %}
+	</div>
+{% endblock %}
+{% block right_btn %}
+	<div class="col-md-3" align="right">
+		<br>
+		<a href="/video"><img src="/static/images/upload_btn.png" border="0" height="50"></a>
+	</div>
+{% endblock %}
+{% block content %}
+	<div class="panel-heading" align="center">
+		{% if no == 0 %}
+			<h3>請選擇欲查看的按鈕</h3>
+		{% elif no == 1 %}
+			<h3>您的平均準確率為{{my_accuracy}}%</h3><br>
+			<h3>超過<span id="ranking"></span>%的使用者</h3>
+			<div hidden id="accuracys">{{accuracys}}</div>
+			<div hidden id="my_accuracy">{{my_accuracy}}</div>
+			<script>
+				var my_accuracy = document.getElementById("my_accuracy").innerHTML;
+				var accuracys = document.getElementById("accuracys").innerHTML;
+				accuracys = accuracys.replace(/\[|]/g, '');
+				accuracys = accuracys.replace(/'/g, '');
+				accuracys = accuracys.replace(/[ ]/g, '');
+				accuracys = accuracys.split(/,/);
+				for(i=0;i<accuracys.length;i++){
+					if(accuracys[i]==my_accuracy){
+						var ranking = (accuracys.length-i-1)/(accuracys.length)*100;
+						ranking = ranking.toFixed(2);
+						document.getElementById("ranking").innerHTML = ranking;
+						break;
+					}
+				}
+			</script>
+		{% elif no == 2 %}
+			<h3>您的最長持續運動天數為{{my_days}}天</h3><br>
+			<h3>超過<span id="ranking"></span>%的使用者</h3>
+			<div hidden id="my_days">{{my_days}}</div>
+			<div hidden id="days">{{days}}</div>
+			<script>
+				var my_days = document.getElementById("my_days").innerHTML;
+				var days = document.getElementById("days").innerHTML;
+				days = days.replace(/\[|]/g, '');
+				days = days.replace(/'/g, '');
+				days = days.replace(/[ ]/g, '');
+				days = days.split(/,/);
+				for(i=0;i<days.length;i++){
+					if(days[i]==my_days){
+						var ranking = (days.length-i-1)/(days.length)*100;
+						ranking = ranking.toFixed(2);
+						document.getElementById("ranking").innerHTML = ranking;
+						break
+					}
+				}
+				document.getElementById("ranking").innerHTML = ranking;
+			</script>
+		{% endif %}
+	</div>
+	<div class="panel-body" align="center">
+		{% if no == 1 %}
+			{% for others_accuracy in others_accuracys %}
+				{% if forloop.first %}
+				<table border="1" style="font-size:20px;font-family:serif;" cellpadding="5" width="600" align="center">
+				<tr align="center"><td>使用者</td><td>平均準確率</td></tr>
+				{% endif %}
+				{% if others_accuracy.user == user %}
+				<tr bgcolor="#ccffcc" align="center">
+				{% else %}
+				<tr align="center">
+				{% endif %}
+				<td>{{others_accuracy.user.username}}</td><td>{{ others_accuracy.average_accuracy }}%</td></tr>
+				{% if forloop.last %}
+				</table>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+		{% if no == 2 %}
+			{% for others_day in others_days %}
+				{% if forloop.first %}
+				<table border="1" style="font-size:20px;font-family:serif;" cellpadding="5" width="600" align="center">
+				<tr align="center"><td>使用者</td><td>最長持續運動天數</td></tr>
+				{% endif %}
+				{% if others_day.user == user %}
+				<tr bgcolor="#ccffcc" align="center">
+				{% else %}
+				<tr align="center">
+				{% endif %}
+				<td>{{others_day.user.username}}</td><td>{{ others_day.max_continue_days }}天</td></tr>
+				{% if forloop.last %}
+				</table>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	</div>
+{% endblock %}

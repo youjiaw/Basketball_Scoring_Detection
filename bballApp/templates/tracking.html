@@ -1,0 +1,127 @@
+{% extends 'tracking_base.html' %}
+{% block title %}能力追蹤{% endblock %}
+{% block headline %}
+	<img src="/static/images/tracking.png" height="100" border="0">
+{% endblock %}
+{% block left_btn %}
+	<!-- <a href="/history"><img src="/static/images/history_btn.png" align="left" style="margin: 20px;"></a> -->
+	<a href="/history"><img src="/static/images/history_btn.png" align="left" width="200" style="margin: 20px;"></a>
+{% endblock %}
+{% block choice %}
+	{% if record_days.absent_days == 0 %}
+		<div class="col-md-2" align="right">
+			<img src="/static/images/attend.jpg">
+		</div>
+		<div class="col-md-4">
+			<br>
+			<h4>已持續運動{{record_days.attend_days}}天</h4>
+		</div>
+	{% elif record_days.attend_days == 0 %}
+		<div class="col-md-2" align="right">
+			<img src="/static/images/absent.png">
+		</div>
+		<div class="col-md-4">
+			<br>
+			<h4>已有{{record_days.absent_days}}天沒運動</h4>
+		</div>
+	{% endif %}
+{% endblock %}
+{% block right_btn %}
+	<div class="col-md-3" align="right">
+		<br>
+		<a href="/video"><img src="/static/images/upload_btn.png" border="0" height="50"></a>
+	</div>
+{% endblock %}
+{% block content %}
+	<div class="panel-heading">
+		<a href="/compare/0"><img src="/static/images/compare_btn.png" height="50"></a>
+		<h3 align="center">{{username}}的投籃準確度</h3>
+	</div>
+	<div class="panel-body" align="center">
+		<div hidden id="pub_time_list">{{pub_time_list}}</div> 
+		<div hidden id="accuracy_list">{{accuracy_list}}</div>
+		<span id="test"></span>
+		<canvas id="canvas" width="600" height="500"></canvas>
+	</div>
+	<script>
+		var pub_time_list = document.getElementById("pub_time_list").innerHTML;
+		var accuracy_list = document.getElementById("accuracy_list").innerHTML;
+		pub_time_list = pub_time_list.replace(/\[|]/g, '');
+		pub_time_list = pub_time_list.replace(/'/g, '');
+		pub_time_list = pub_time_list.replace(/[ ]/g, '');
+		pub_time_list = pub_time_list.split(/,/);
+		accuracy_list = accuracy_list.replace(/\[|]/g, '');
+		accuracy_list = accuracy_list.replace(/'/g, '');
+		accuracy_list = accuracy_list.replace(/[ ]/g, '');
+		accuracy_list = accuracy_list.split(/,/);
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		function drawBorder(){
+			ctx.beginPath();
+			ctx.moveTo(100,50);
+			ctx.lineTo(100,400);  
+            ctx.moveTo(100,400);  
+            ctx.lineTo(600,400);  
+            ctx.closePath();  
+            ctx.stroke();
+		}
+
+		function drawLine(){
+			for (i=0;i<accuracy_list.length-1;i++){
+				var accuracy_list_SY = 400-accuracy_list[i]/0.3;
+				var accuracy_list_SX = i*100+150;
+				var accuracy_list_NY = 400-accuracy_list[i+1]/0.3;  
+                var accuracy_list_NX = (i+1)*100+150;
+                ctx.beginPath();
+                ctx.moveTo(accuracy_list_SX,accuracy_list_SY);  
+                ctx.lineTo(accuracy_list_NX,accuracy_list_NY);  
+                ctx.lineWidth = 3; 
+                ctx.strokeStyle = "#80aa33";
+                ctx.closePath();  
+                ctx.stroke();
+			}
+		}
+		function drawBlock(){
+			for (i = 0;i <= accuracy_list.length;i++){  
+                var accuracy_list_SY = 400-accuracy_list[i]/0.3;  
+                var accuracy_list_SX = i*100+150;  
+                ctx.beginPath();  
+                // 畫出的方塊  
+                ctx.moveTo(accuracy_list_SX-4,accuracy_list_SY);  
+                ctx.lineTo(accuracy_list_SX,accuracy_list_SY-4);  
+                ctx.lineTo(accuracy_list_SX+4,accuracy_list_SY);  
+                ctx.lineTo(accuracy_list_SX,accuracy_list_SY+4);  
+                ctx.fill();  
+                ctx.font = "15px scans-serif";  
+                ctx.fillStyle = "black";  
+                //折線上的點值  
+                var text = ctx.measureText(accuracy_list[i]);  
+                ctx.fillText(accuracy_list[i]+"%",accuracy_list_SX-text.width,accuracy_list_SY-10);  
+                //繪制縱坐標  
+                // var colText = ctx.measureText((accuracy_list.length-i)*500);  
+                // ctx.fillText((10-i)*10,90-colText.width,i*115+55);  
+                //繪制橫坐標並判斷
+                if (i < accuracy_list.length){
+                    var rowText = ctx.measureText(pub_time_list[i]);  
+                    ctx.fillText(pub_time_list[i],accuracy_list_SX-rowText.width/2,420);  
+                }
+                else if(i == accuracy_list.length){  
+                    return;  
+                }  
+                ctx.closePath();  
+                ctx.stroke();  
+            }  
+		}
+		function draw_yinfo(){
+			//繪制縱坐標 
+			for (i=0;i<=10;i++) {
+				var colText = ctx.measureText(500);  
+            	ctx.fillText((10-i)*10+"%",90-colText.width,i*35+55);
+			}
+		}
+		drawBorder();  
+        drawLine();  
+        drawBlock();
+        draw_yinfo();
+	</script>
+{% endblock %}

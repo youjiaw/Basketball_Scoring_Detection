@@ -1,0 +1,9 @@
+{% extends 'homepage_base.html' %}
+{% load static %}
+{% block button %}
+	<div align="center">
+		<img src="{% static '/images/member.png' %}" height="60">
+		<a href="/accounts/register"><img src="{% static '/images/register.png' %}" height="50"></a>&emsp;
+		<a href="/login"><img src="{% static '/images/login.png' %}" height="50"></a>
+	</div>
+{% endblock %}

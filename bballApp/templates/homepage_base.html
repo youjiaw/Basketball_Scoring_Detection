@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首頁</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<a href="/"><img src="/static/images/logo.png" align="left" width="200" style="margin: 20px;" border="0"></a>
+	<br><br><br><br>
+	{% block button %}{% endblock %}
+	<br>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4 col-md-4" style="border-style: solid; border-width: 2px; border-radius: 10px; border-color: black;" >
+				<div class="panel-heading" align="center">
+					<h2 align="center">{{country}}的天氣資訊</h2>
+				</div>
+				<div class="panel-body" align="left">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="{% static '/images/weather.jpg' %}" width="100" border="0">
+						</div>
+						<div class="col-md-8">
+							<br>
+							{{phenomenon}}<br>
+							最高溫: {{max_t}}℃
+							最低溫: {{min_t}}℃<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="{% static '/images/rainy.jpg' %}" border="0">
+						</div>
+						<div class="col-md-8">
+							<br><br>
+							降雨機率: {{rainy_prob}}%<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="{% static '/images/pm25.jpg' %}" width="80" border="0" style="margin: 5px">
+						</div>
+						<div class="col-md-8">
+							<br><br>
+							{% if pn25_len > 3 %}
+								PM2.5指標等級: {{pm25_level}}
+							{% else %}
+								{{pm25_level}}
+							{% endif %}
+							<br>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-4">
+							{% if comfort_level >= 11 and comfort_level <= 30 %}
+								<img src="{% static '/images/comfortable.png' %}" width="80">
+							{% else %}
+								<img src="{% static '/images/uncomfortable.png' %}" width="80">
+							{% endif %}
+						</div>
+						<div class="col-md-8">
+							<br>
+							舒適度指標: {{comfort_level}}
+							{% if comfort_level >= 11 and comfort_level <= 30 %}
+								{% if comfort_level >= 11 and comfort_level <= 15 %}
+									(寒冷)
+								{% endif %}
+								{% if comfort_level >= 16 and comfort_level <= 19 %}
+									(稍有寒意)
+								{% endif %}
+								{% if comfort_level >= 20 and comfort_level <= 26 %}
+									(舒適)
+								{% endif %}
+								{% if comfort_level >= 27 and comfort_level <= 30 %}
+									(悶熱)
+								{% endif %}
+								<br>今天適合打球！
+							{% else %}
+								{% if comfort_level <= 10 %}
+									(非常寒冷)
+								{% endif %}
+								{% if comfort_level >= 31 %}
+									(非常悶熱)
+								{% endif %}
+								<br>今天不太適合打球！
+							{% endif %}	
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer" align="center">資料時間: {{time}}</div>
+			</div>
+			<div class="col-xs-8 col-md-8" style="border-style: solid; border-width: 2px; border-radius: 10px; border-color: black;">
+				<div panel panel-default>
+					<div class="panel-heading" align="center">
+						<h2 align="center">NBA本周賽事</h2>
+					</div>
+					<div class="panel-body" align="center">
+						{% if games %}
+							{% for game in games %}
+								<div class="row" style="border-style: solid; border-width: 2px; border-radius: 10px; border-color: black;">
+									<br>
+									<div class="col-md-7">
+										<img src="/static/images/NBA_team_logo/{{game.3}}.gif">{{game.3}}
+										<br><h3 align="center">v.s.</h3><br>
+										<img src="/static/images/NBA_team_logo/{{game.2}}.gif">{{game.2}}
+									</div>
+									<div class="col-md-5">
+										<br><br><br><br><br>
+										{{game.0}}<br><br>{{game.1}}<br>
+										<!-- {{game.4}}, {{game.5}} -->
+									</div>
+								</div>
+							{% endfor %}
+						{% else %}
+							<h3 align="center">本周沒有賽事</h3>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

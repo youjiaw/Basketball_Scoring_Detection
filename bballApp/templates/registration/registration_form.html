@@ -1,0 +1,19 @@
+{% extends 'member_base.html' %}
+{% block title %}註冊{% endblock %}
+{% block header %}註冊{% endblock %}
+{% block content %}
+	<form action="." method="POST">
+		{% csrf_token %}
+		<table>
+			{{ form.as_table }}
+		</table>
+		<br><br>
+		<input type="submit" value="確認">
+	</form>
+	<br>
+{% endblock %}
+{% block footer %}
+	<h6>
+		已有帳號-><a href="/login">登入會員</a>
+	</h6>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'tracking_base.html' %}
+{% block title %}查詢歷史紀錄{% endblock %}
+{% block headline %}
+	<img src="/static/images/history.png" align="center" height="100" border="0">
+{% endblock %}
+{% block left_btn %}
+	<a href="/tracking"><img src="/static/images/tracking_btn.png" align="left" height="50" style="margin: 10px;"></a>
+{% endblock %}
+{% block right_btn %}
+<div class="col-md-9" align="right">
+	<br>
+	<a href="/video"><img src="/static/images/upload_btn.png" border="0" height="50"></a>
+	</div>
+{% endblock %}
+{% block content %}
+	{% if videos %}
+		{% for video in videos %}
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<video id="history_video" width="400" controls="">
+							<source src="/media/{{video.video_name}}" type="video/mp4">
+							您的瀏覽器不支援此影片連結
+						</video>
+					</div>
+					<div class="col-md-7">
+						<br><br><br><br>
+						<h4>日期: {{video.pub_time}}, 運動時長: {{video.duration_h}}時{{video.duration_m}}分{{video.duration_s}}秒<!-- <span id="video_duration"></span> -->, 準確度: {{video.accuracy}}%</h4>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- <script>
+				var myVideo = document.getElementById("history_video");
+				var insert = document.getElementById("video_duration");
+				myVideo.onloadedmetadata = function() {
+					var duration = this.duration;
+					var h = 0;
+					var m = 0;
+					var s = 0;
+					if (duration<60){
+						s = duration;
+					}
+					else if (duration>=60&&duration<3600){
+						m = duration/60;
+						s = duration%60;
+					}
+					else{
+						h = duration/3600;
+						duration%=3600;
+						m = duration/60;
+						s = duration%60;
+					}
+					h = Math.floor(h);
+					m = Math.floor(m);
+					s = Math.floor(s);
+					document.getElementById("video_duration").innerHTML = h+"時"+m+"分"+s+"秒";
+				};
+			</script> -->
+		{% endfor %}
+	{% else %}
+		<h2 align="center">尚未上傳檔案</h2>
+	{% endif %}
+{% endblock %}

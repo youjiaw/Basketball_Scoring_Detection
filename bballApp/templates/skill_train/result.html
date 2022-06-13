@@ -1,0 +1,36 @@
+{% extends 'skill_train/base.html' %}
+{% load static %}
+
+{% block content %}
+	<br>
+	<div class="container">
+		<div class="row" align="center">
+			{% if empty %}
+				<h2>沒有進球...</h2>
+			{% else %}
+				<div class="col-md-6 col-md-offset-3" align="center">
+					<video width="550" height="310" controls preload="metadata">
+					    <source src="/media/{{targetdir}}/{{ highlight_video }}" type="video/mp4">
+					    <p>Your browser doesn't support HTML5 video.</p>
+					</video>
+
+					<br><br>
+					<a href='/media/{{targetdir}}/{{ highlight_video }}' download="{{ highlight_video }}"><img src="{% static 'images/download.png' %}" width="200"></a>
+
+				</div>
+				
+				<div class="col-md-3" align="right">
+
+					<a href="/filter/0/0/0/"><img src="{% static 'images/edit_1.png' %}" onmouseover="this.src='{% static 'images/edit_2.png' %}'" onmouseout="this.src='{% static 'images/edit_1.png' %}'" width="150"></a>
+
+					<br><br>
+					<a href="/tracking"><img src="{% static 'images/track.png' %}" width="200"></a>
+
+					<br><br><br><br><br><br><br><br><br>
+					<img src="{% static 'images/players.png' %}" width="250">
+				</div>
+			{% endif %}
+		</div>
+			
+	</div>
+{% endblock %}
