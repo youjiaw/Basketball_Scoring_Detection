@@ -6,11 +6,11 @@ import os
 import tqdm
 
 # ----------modify input video here----------
-input_video_dir = "/Users/apple/Desktop/專題/籃球/training and testing datas/final_test"
-video_name = "final_test" + ".mp4"
+input_video_dir = ""
+video_name = "" + ".mp4"
 
 # ----------modify ouput highlight video here----------
-highlight_saving_dir = "/Users/apple/Desktop/"
+highlight_saving_dir = ""
 
 # ----------modify cfg and weight file here----------
 # basketball
