@@ -4,13 +4,13 @@ import sys
 import traceback
 import os
 import tqdm
-
+ 
 # ----------modify input video here----------
-input_video_dir = "/Users/apple/Desktop/專題/籃球/training and testing datas/final_test"
-video_name = "final_test" + ".mp4"
+input_video_dir = ""
+video_name = "" + ".mp4"
 
 # ----------modify ouput highlight video here----------
-highlight_saving_dir = "/Users/apple/Desktop/"
+highlight_saving_dir = ""
 
 # ----------modify cfg and weight file here----------
 # basketball
@@ -288,7 +288,7 @@ if __name__ == '__main__':
         func_name = lastCallStack[2]  # 取得發生的函數名稱
         error_infor = "line {}, in {}: [{}] {}".format(line_num, func_name, error_class, detail)
         print(detail)
-        print(error_infor)
+        print(error_infor) 
 
     finally:
         pbar.close()
