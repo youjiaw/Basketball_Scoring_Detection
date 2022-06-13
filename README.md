@@ -51,8 +51,6 @@ pip install -r requirements.txt
 python final.py
 ```
 
-=======
-
 ## 網頁程式碼說明
 
 執行網站需要linux系統，並創建虛擬環境
