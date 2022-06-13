@@ -10,18 +10,18 @@
 1. 辨識籃球和藍筐  
 2. 確認是否進球  
 這兩項問題，以下是我們找到的相關研究:  
-## 參考文獻[1] Ratgeber, L., Ivankovic, Z., Gojkovic, Z., Milosevic, Z., Markoski, B., & Kostic–Zobenica, A. (2019). Video Mining in Basketball Shot and Game Analysis. Acta Polytechnica Hungarica, 16(1), 7-27.  
+* 參考文獻[1] Ratgeber, L., Ivankovic, Z., Gojkovic, Z., Milosevic, Z., Markoski, B., & Kostic–Zobenica, A. (2019). Video Mining in Basketball Shot and Game Analysis. Acta Polytechnica Hungarica, 16(1), 7-27.  
 利用將畫面轉換成HSV顏色模型的方式辨識籃球和籃筐，並依照籃球在通過籃筐上方區域後是否通過籃框下方區域來決定是否進球。
-* 優點:每秒減少2/3的畫面使用來提高辨識速度而不影響準確度，因為利用球是否通過籃筐上方與下方作為判斷依據，這件事的發生不會快到以至於在減少的畫面集合中沒有被記錄下來
-* 缺點:籃球到籃筐下方區域時，可能會受到球員的干擾而影響判定結果，且此方法無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
-## 參考文獻[2] Fu, X. B., Yue, S. L., & Pan, D. Y. (2021). Camera-based basketball scoring detection using convolutional neural network. International Journal of Automation and Computing, 18(2), 266-276.  
+  * 優點:每秒減少2/3的畫面使用來提高辨識速度而不影響準確度，因為利用球是否通過籃筐上方與下方作為判斷依據，這件事的發生不會快到以至於在減少的畫面集合中沒有被記錄下來
+  * 缺點:籃球到籃筐下方區域時，可能會受到球員的干擾而影響判定結果，且此方法無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
+* 參考文獻[2] Fu, X. B., Yue, S. L., & Pan, D. Y. (2021). Camera-based basketball scoring detection using convolutional neural network. International Journal of Automation and Computing, 18(2), 266-276.  
 利用YOLO模型判斷出籃筐位置，並利用圖像差分找出移動中的物體，最後依照此物體是否有通過籃筐位置來判斷是否進球。
-* 優點:只要籃球有通過籃筐範圍就會被判斷成有進球，所以進球一定會被判斷出來
-* 缺點:無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
-## 參考文獻[3] Huang, C. L., Shih, H. C., & Chen, C. L. (2006, July). Shot and scoring events identification of basketball videos. In 2006 IEEE International Conference on Multimedia and Expo (pp. 1885-1888). IEEE.  
+  * 優點:只要籃球有通過籃筐範圍就會被判斷成有進球，所以進球一定會被判斷出來
+  * 缺點:無法判斷籃球是從籃筐內部還是外部通過，可能會造成籃球與籃筐範圍重疊但未進入籃筐卻被誤判成進球的情況。  
+* 參考文獻[3] Huang, C. L., Shih, H. C., & Chen, C. L. (2006, July). Shot and scoring events identification of basketball videos. In 2006 IEEE International Conference on Multimedia and Expo (pp. 1885-1888). IEEE.  
 用SVM(Support Vector Machine)來辨識籃球與籃筐，並將籃球依照是否被籃網覆蓋區分為在籃筐內、在籃筐外兩種類別。
-* 優點:可以在籃球和籃筐重疊時分辨出籃球是否在籃筐內
-* 缺點:過程中每一幀畫面都要判斷SVM的分數以確定籃球和籃筐的位置，故處理影片的速度較慢。  
+  * 優點:可以在籃球和籃筐重疊時分辨出籃球是否在籃筐內
+  * 缺點:過程中每一幀畫面都要判斷SVM的分數以確定籃球和籃筐的位置，故處理影片的速度較慢。  
 
 # 設計原理
 
