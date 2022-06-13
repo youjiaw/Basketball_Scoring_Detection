@@ -43,7 +43,7 @@ def index(request, no=0):
 				if absent_days == 0 and attend_days == 0:
 					max_continue_days = 1
 					attend_days = 1
-				else if absent_days == 0 and interval != 0:
+				elif absent_days == 0 and interval != 0:
 					attend_days = attend_days + 1
 					if max_continue_days < attend_days:
 						max_continue_days = attend_days
