@@ -50,8 +50,7 @@ pip install -r requirements.txt
 ```python
 python final.py
 ```
-## weather.py
-用來取得未來八小時的天氣預報
+
 =======
 
 ## 網頁程式碼說明
