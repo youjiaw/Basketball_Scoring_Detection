@@ -173,6 +173,3 @@ python3 manage.py runserver
 pip uninstall ...
 pip install ...
 ```
-
-
-## 網頁執行步驟
