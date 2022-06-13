@@ -136,15 +136,13 @@ sudo apt-get -y install python3-pip
 sudo pip3 install virtualenv
 ```
 
-在目的資料夾中使用virtualenv建立一個虛擬環境，並安裝Django
+在目的資料夾中使用virtualenv建立一個虛擬環境
 
 ```bash
 #建立虛擬環境
 virtualenv VENV
 #進入虛擬環境
 source VENV/bin/activate
-#安裝Django
-(VENV) $ pip install django
 ```
 接著下載兩份requirements.txt，第二份在Basketball_Scoring_Detection資料夾裡，
 
