@@ -95,21 +95,24 @@ pip install -r requirements.txt
 python final.py
 ```
 
-## 網頁程式碼說明
+## 網頁程式碼說明 (程式位置可能不只一個、就都放上去括號說分別是做什麼的就好)
 這部分的程式在`bballApp`
 ### 首頁
+會顯示1. 目前天氣以及今天是否適合打球  2. 近七日的相關賽事  
 #### 天氣與相關賽事(爬蟲相關)
 用get取得json，並將內容篩選為我們所需的資料
 ##### 天氣
 程式為`bballApp/mainsite/weather.py`  
 作用:用來取得未來八小時的天氣預報  
 資料來源1:https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=CWB-A89DDEBE-215B-4AE4-AA1B-7A7F52C58235&downloadType=WEB&format=JSON  
+
 資料來源2:https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=fdac918f-b34b-4dd6-94b2-338ea65d1a3f&format=json  
+
 ```python
 python weather.py
 ```
 
-#### future_games_2.py
+##### 相關賽事
 程式為`bballApp/mainsite/future_game.py`  
 作用:取得未來七天的賽程及資訊  
 資料來源: https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/{year}/league/00_full_schedule.json  
@@ -138,9 +141,34 @@ result
 
 ![img](./NBA_future_game_2/result.png)
 
+### 註冊與登入、登出
+#### 註冊
+程式為  
+作用:註冊帳號並寄驗證信  
+//TODO做法  
+
+#### 登入
+程式為  
+作用:登入會員
+//TODO做法  
+
+#### 登出
+程式為
+作用:登出會員
+//TODO做法
+
+
 
 ### 上傳頁面
-#### edit.py
+可以上傳 1. 想要剪輯精華的比賽影片  2. 個人訓練影片，剪輯完成後可自行加入特效  
+#### 影片剪輯
+參見 [進球判斷程式碼說明](#進球判斷程式碼說明)
+#### 特效編輯
+##### 加入音效
+程式為  
+作用:加入音效  
+// TODO (求救 這個檔案去哪了QQ)  
+edit.py
 
 MoviePyTest內有範例影片跟音樂
 ```python
@@ -160,7 +188,12 @@ origin_audio用來選擇是否保留原影片的音軌
 ```python
 python edit.py
 ```
-#### img_effect.py
+##### 加入濾鏡
+程式為  
+作用:加入濾鏡  
+//TODO做法  
+
+img_effect.py
 
 每個函式代表不同的濾鏡
 
@@ -171,6 +204,26 @@ python img_effect.py
 ```
 
 ### 能力追蹤
+這部分使用者可以監控自己的運動情況1. 投籃準確度 2. 查詢歷史紀錄 3. 與其他使用者比較 4. 防懶(會顯示持續運動天數或連續沒有運動的天數)
+#### 顯示投籃準確度
+程式為 //TODO程式位置  
+作用: 顯示至目前為止的投籃準確度曲線  
+//TODO做法
+
+#### 顯示歷史紀錄
+程式為 //TODO程式位置  
+作用: 同標題  
+//TODO做法  
+
+#### 比較
+程式為//TODO程式位置  
+作用:可以比較 1. 持續天數 2. 平均投籃準確度  
+//TODO做法  
+
+#### 防懶功能
+程式為 //TODO程式位置  
+作用: 1. 告知使用者目前持續天數  2. 提醒使用者已經有幾天沒運動了  
+//TODO做法  
 
 
 # 網頁操作說明
@@ -225,4 +278,5 @@ pip install ...
 ## 網頁操作說明
 * 參考demo影片，影片網址:
 * 注意事項
-  * 註冊完如果沒收到信，可以去垃圾郵件的地方看看 
+  * 註冊完如果沒收到信，可以去垃圾郵件的地方看看  
+  * 在進入網站後，隨時點擊左上logo都可以回到首頁呦!
