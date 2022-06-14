@@ -290,6 +290,18 @@ pip uninstall ...
 pip install ...
 ```
 ## 網頁操作說明
+* 首頁
+<img width="1086" alt="image" src="https://user-images.githubusercontent.com/92151140/173490193-f9d09140-3835-4d7f-b0b6-a271609b762f.png">  
+這邊會顯示當前天氣、相關賽事以及是否適合打球，使用者可以選擇註冊或登入
+  * 註冊
+    1. 填入圖中的相關資訊
+  <img width="750" alt="image" src="https://user-images.githubusercontent.com/92151140/173490330-97778d03-3004-49f7-8314-5475b7c1b770.png">  
+    2.  註冊完成
+    <img width="748" alt="image" src="https://user-images.githubusercontent.com/92151140/173490474-1901a226-4365-4d4f-9152-5a6f9106229a.png">  
+    > p.s 要記得去電子信箱啟用帳號  
+    <img width="490" alt="image" src="https://user-images.githubusercontent.com/92151140/173490568-0a206f82-fdb6-407f-a2ca-92f4db422681.png">
+
+  
 * 參考demo影片，影片網址:
 * 注意事項
   * 註冊完如果沒收到信，可以去垃圾郵件的地方看看  
