@@ -96,9 +96,12 @@ python final.py
 ```
 
 ## 網頁程式碼說明
-
+這部分的程式在`bballApp`
 ### 首頁
-#### weather.py
+#### 天氣與相關賽事(爬蟲相關)
+用get取得json，並將內容篩選為我們所需的資料
+##### 天氣
+weather.py
 用來取得未來八小時的天氣預報 
 
 ```python
