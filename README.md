@@ -299,9 +299,8 @@ pip install ...
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/92151140/173490330-97778d03-3004-49f7-8314-5475b7c1b770.png">  
 2.  註冊完成
 <img width="748" alt="image" src="https://user-images.githubusercontent.com/92151140/173490474-1901a226-4365-4d4f-9152-5a6f9106229a.png">  
-> p.s 要記得去電子信箱啟用帳號  
+p.s 要記得去電子信箱啟用帳號  
 <img width="490" alt="image" src="https://user-images.githubusercontent.com/92151140/173490568-0a206f82-fdb6-407f-a2ca-92f4db422681.png">
-
   
 * 參考demo影片，影片網址:
 * 注意事項
