@@ -101,16 +101,17 @@ python final.py
 #### 天氣與相關賽事(爬蟲相關)
 用get取得json，並將內容篩選為我們所需的資料
 ##### 天氣
-weather.py
-用來取得未來八小時的天氣預報 
-
+程式為`bballApp/mainsite/weather.py`
+作用:用來取得未來八小時的天氣預報 
+資料來源1:https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=CWB-A89DDEBE-215B-4AE4-AA1B-7A7F52C58235&downloadType=WEB&format=JSON  
+資料來源2:https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=fdac918f-b34b-4dd6-94b2-338ea65d1a3f&format=json  
 ```python
 python weather.py
 ```
 
 #### future_games_2.py
-取得未來七天的賽程及資訊
-
+程式為`bballApp/mainsite/future_game.py`
+作用:取得未來七天的賽程及資訊
 資料來源: https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/{year}/league/00_full_schedule.json
 
 year為賽季開始的年份
