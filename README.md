@@ -187,7 +187,7 @@ result
 參見 [進球判斷程式碼說明](#進球判斷程式碼說明)
 #### 特效編輯
 ##### 加入音效
-程式為  
+程式為`bballApp/video_handler/music_slow.py`
 作用:加入音效  
 // TODO (求救 這個檔案去哪了QQ)  
 edit.py
@@ -211,7 +211,7 @@ origin_audio用來選擇是否保留原影片的音軌
 python edit.py
 ```
 ##### 加入濾鏡
-程式為`bballApp/video_handler/music_slow.py`  
+程式為  
 作用:加入濾鏡  
 //TODO做法  
 
