@@ -308,10 +308,9 @@ p.s 要記得去電子信箱啟用帳號
 
 ### 上傳影片
 1. 進入頁面後，可以選擇要上傳的是想要剪輯的比賽影片，或者是個人訓練影片 `註:只有上傳個人訓練影片才會計入能力追蹤`  
-![上傳](https://user-images.githubusercontent.com/92151140/174219406-4fec08c6-2f15-4830-ae39-bdfc1d3a642c.png)  
-
-2. 選擇完可以挑選mp4檔上傳    
-![有選東西](https://user-images.githubusercontent.com/92151140/174220312-66b3b074-3f2e-4fc4-ba05-fa0382f776e4.jpg)  
+<img width="779" alt="image" src="https://user-images.githubusercontent.com/92151140/174219406-4fec08c6-2f15-4830-ae39-bdfc1d3a642c.png">  
+2. 選擇完可以挑選mp4檔上傳  
+<img width="779" alt="image" src="https://user-images.githubusercontent.com/92151140/174220312-66b3b074-3f2e-4fc4-ba05-fa0382f776e4.jpg">  
 <img width="779" alt="image" src="https://user-images.githubusercontent.com/92151140/174220369-b6e290aa-2e9c-492e-91da-558f0cef32ec.png">  
 <img width="779" alt="image" src="https://user-images.githubusercontent.com/92151140/174220445-81ad20c7-5aea-453b-b2a0-38ff35d3b54b.png">  
 3. 剪輯中 ✂️  
