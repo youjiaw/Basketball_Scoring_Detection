@@ -315,8 +315,9 @@ p.s 要記得去電子信箱啟用帳號
 <img width="779" alt="image" src="https://user-images.githubusercontent.com/92151140/174220445-81ad20c7-5aea-453b-b2a0-38ff35d3b54b.png">  
 3. 剪輯中 ✂️  
 <img width="771" alt="image" src="https://user-images.githubusercontent.com/92151140/174220629-238383aa-cb85-4864-a871-10c335cdba99.png">  
-4. 剪輯完可以選擇直接下載片段或者是再進入`編輯特效`的功能，製作出有自己特色的精華片段
+4. 剪輯完可以選擇直接下載片段或者是再進入 `編輯特效` 的功能，製作出有自己特色的精華片段
 <img width="781" alt="image" src="https://user-images.githubusercontent.com/92151140/174220833-44b78414-383d-43df-aa2b-c48630b8fb6d.png">  
+
 #### 編輯特效
 再這邊我們可以選擇想要的濾鏡、音效以及是否想要慢動作  
 <img width="1262" alt="image" src="https://user-images.githubusercontent.com/92151140/174221239-ffa908a9-d162-4fde-bda1-3d1eba86e9f6.png">  
