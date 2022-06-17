@@ -211,7 +211,7 @@ origin_audio用來選擇是否保留原影片的音軌
 python edit.py
 ```
 ##### 加入濾鏡
-程式為  
+程式為`bballApp/video_handler/music_slow.py`  
 作用:加入濾鏡  
 //TODO做法  
 
