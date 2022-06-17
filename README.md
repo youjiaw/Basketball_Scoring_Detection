@@ -86,7 +86,7 @@
  ## 網頁架構
 我們的網頁主要是依據下圖的functional map做設計
 而網頁的架設是使用Django
-<img width="903" alt="image" src="https://user-images.githubusercontent.com/92151140/173358558-a11d7dc9-9d9f-44ad-8cec-17edb8518364.png">    
+<img width="922" alt="image" src="https://user-images.githubusercontent.com/92151140/174255207-5f47f9b5-c1f3-4208-828f-f5cdd49a6521.png"> 
 ## 資料庫
 //TODO
 
@@ -361,7 +361,7 @@ p.s 要記得去電子信箱啟用帳號
 會顯示目前持續運動天數，以及和資料庫中其他使用者比較後之結果(綠底部分為使用者的資料)  
 <img width="761" alt="image" src="https://user-images.githubusercontent.com/92151140/174202108-52dd9256-8e79-4654-a683-15a1390f6e22.png">
 
-* 參考demo影片，影片網址:
+* 參考demo影片，影片網址: https://www.youtube.com/watch?v=THxvA-7UwUk 從19:50秒一直到26:04結束
 * 注意事項
   * 註冊完如果沒收到信，可以去垃圾郵件的地方看看  
   * 在進入網站後，隨時點擊左上logo都可以回到首頁呦!
