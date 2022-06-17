@@ -334,7 +334,7 @@ p.s 要記得去電子信箱啟用帳號
 <img width="781" alt="image" src="https://user-images.githubusercontent.com/92151140/174220833-44b78414-383d-43df-aa2b-c48630b8fb6d.png">  
 
 #### 編輯特效
-再這邊我們可以選擇想要的濾鏡、音效以及是否想要慢動作  
+在這邊我們可以選擇想要的濾鏡、音效以及是否想要慢動作  
 <img width="1262" alt="image" src="https://user-images.githubusercontent.com/92151140/174221239-ffa908a9-d162-4fde-bda1-3d1eba86e9f6.png">  
 5. 選擇完畢點擊製作影片，會再回到 **3.剪輯中✂️**
 
