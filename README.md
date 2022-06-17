@@ -294,15 +294,40 @@ pip install ...
 這邊會顯示當前天氣、相關賽事以及是否適合打球，使用者可以選擇註冊或登入
 <img width="1086" alt="image" src="https://user-images.githubusercontent.com/92151140/173490193-f9d09140-3835-4d7f-b0b6-a271609b762f.png">  
 
-* 註冊
+**註冊教學**
 1. 填入圖中的相關資訊
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/92151140/173490330-97778d03-3004-49f7-8314-5475b7c1b770.png">  
 2.  註冊完成
 <img width="748" alt="image" src="https://user-images.githubusercontent.com/92151140/173490474-1901a226-4365-4d4f-9152-5a6f9106229a.png">  
 p.s 要記得去電子信箱啟用帳號  
 <img width="490" alt="image" src="https://user-images.githubusercontent.com/92151140/173490568-0a206f82-fdb6-407f-a2ca-92f4db422681.png">
-  
-* 參考demo影片，影片網址:
-* 注意事項
-  * 註冊完如果沒收到信，可以去垃圾郵件的地方看看  
-  * 在進入網站後，隨時點擊左上logo都可以回到首頁呦!
+登入後的頁面  
+<img width="1227" alt="image" src="https://user-images.githubusercontent.com/92151140/174200967-2bf289cf-a27e-4fd5-9584-f9ae0fb1a645.png">
+這邊會有 1. 上傳影片  2. 進入能力追蹤 可以按，下面說明點擊後的情境
+
+
+### 上傳影片
+
+
+### 能力追蹤
+* 進入頁面後，顯示的是  
+  * 至今為止的每日投籃準確率趨勢圖 `每日投籃趨勢值:使用者將每日的練習視頻上傳後，片中的進球比率即為該日投籃準確率`  
+  * 防懶功能
+    * 若有持續運動 ➡️ 顯示已持續運動幾天
+    * 若持續**沒**運動 ➡️ 顯示已有幾天沒運動
+<img width="1215" alt="image" src="https://user-images.githubusercontent.com/92151140/174201072-20a65669-798d-455c-a551-bae4d1e0bd75.png">
+
+#### 查詢歷史紀錄
+內容為至今為止上傳過的**個人訓練影片**，上面會顯示上傳日期、精華時長與該日的準確率  
+<img width="1214" alt="image" src="https://user-images.githubusercontent.com/92151140/174201651-85d965fb-fa0a-4945-bf06-3739724d09bf.png">
+
+#### 與其他使用者比較
+使用者可自行選擇想要評比的項目  
+<img width="758" alt="image" src="https://user-images.githubusercontent.com/92151140/174201861-4683a121-1214-4a03-9d92-e0b55e43c5fa.png">
+##### 選擇比較準確率
+會顯示目前的平均投籃準確率，以及和資料庫中其他使用者比較後之結果(綠底部分為使用者的資料)  
+<img width="757" alt="image" src="https://user-images.githubusercontent.com/92151140/174201933-7fc3e483-f00b-44e2-b396-4da4bf90dab4.png">
+
+##### 選擇比較持續天數
+會顯示目前持續運動天數，以及和資料庫中其他使用者比較後之結果(綠底部分為使用者的資料)  
+<img width="761" alt="image" src="https://user-images.githubusercontent.com/92151140/174202108-52dd9256-8e79-4654-a683-15a1390f6e22.png">
