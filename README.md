@@ -77,8 +77,8 @@
     * 為了解決誤判的情況，在訓練籃筐模型時將標記的類別分為兩種：有進球的籃筐與沒進球的籃筐，如果籃筐範圍內有籃球而且籃網將籃球覆蓋住，就會被標示為有進球，其餘則標成沒進球  
  ## 網頁架構
 我們的網頁主要是依據下圖的functional map做設計
-<img width="903" alt="image" src="https://user-images.githubusercontent.com/92151140/173358558-a11d7dc9-9d9f-44ad-8cec-17edb8518364.png">  
-而網頁的架設是使用Django  
+而網頁的架設是使用Django
+<img width="903" alt="image" src="https://user-images.githubusercontent.com/92151140/173358558-a11d7dc9-9d9f-44ad-8cec-17edb8518364.png">    
 ## 資料庫
 //TODO
 
