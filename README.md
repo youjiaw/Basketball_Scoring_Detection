@@ -190,8 +190,6 @@ result
 ##### 加入音效
 程式為`bballApp/video_handler/music_slow.py`   
 作用:加入音效  
-// TODO (求救 這個檔案去哪了QQ)  
-edit.py
 
 MoviePyTest內有範例影片跟音樂
 ```python
