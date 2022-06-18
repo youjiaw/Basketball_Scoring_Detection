@@ -191,6 +191,7 @@ result
 程式為`bballApp/video_handler/music_slow.py`   
 作用:加入音效  
 
+程式會根據使用者選擇的音樂和是否要慢動作製作出一個新的影片
 MoviePyTest內有範例影片跟音樂
 ```python
 audio = AudioFileClip(input_audio_name)
@@ -210,9 +211,8 @@ origin_audio用來選擇是否保留原影片的音軌
 python edit.py
 ```
 ##### 加入濾鏡
-程式為  
+程式為`bballApp/video_handler/img_effect.py`
 作用:加入濾鏡  
-//TODO做法  
 
 img_effect.py
 
@@ -223,6 +223,8 @@ filter_imgs/origin.png為範例圖片
 ```python
 python img_effect.py
 ```
+使用者在頁面選擇好影片要用的濾鏡後，按下製作就會呼叫`bballApp/video_handler/highlight_video_effect.py`
+此程式import了img_effect.py，會將影片中每一個畫面套上選擇的濾鏡，並輸出成一個新的影片。
 
 ### 能力追蹤
 這部分使用者可以監控自己的運動情況1. 投籃準確度 2. 查詢歷史紀錄 3. 與其他使用者比較 4. 防懶(會顯示持續運動天數或連續沒有運動的天數)
