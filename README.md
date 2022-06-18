@@ -88,8 +88,9 @@
 而網頁的架設是使用Django
 <img width="922" alt="image" src="https://user-images.githubusercontent.com/92151140/174255207-5f47f9b5-c1f3-4208-828f-f5cdd49a6521.png"> 
 ## 資料庫
-//TODO
-
+我們是使用SQLite建構資料庫，並使用Django提供的models.py操作資料庫。
+管理介面如下。
+<img width="922" alt="image" src="https://drive.google.com/file/d/1WIF6v4RJFEENRNQzWlerKRoqkbAKXa8D/view?usp=sharing">
 # 程式碼說明
 這部分的內容主要分為 1. 自動判斷進球時刻的剪輯系統 2. 前端網頁 這兩個部分
 ## 進球判斷程式碼說明
