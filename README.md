@@ -274,7 +274,9 @@ path('history/', history),
 輸出模板: `bballApp/templates/history.html`(繼承自`bballApp/templates/tracking_base.html`)  
 作用: 顯示使用者目前為止上傳過的個人訓練影片和該影片的上傳日期、影片時長、準確度  
 
-
+在輸出模板上利用video tag顯示目前為止上傳過的個人訓練影片，
+並輸出對應的資訊，該資訊是從`bballApp/mainsite/views.py`中的history函式取得，
+如果使用者的瀏覽器版本不支援影片輸出，畫面將會顯示"您的瀏覽器不支援此影片連結"   
 
 #### 與其他使用者比較
 程式為//TODO程式位置  
