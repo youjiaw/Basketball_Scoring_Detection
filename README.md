@@ -180,9 +180,13 @@ path('accounts/', include('registration.backends.default.urls'))
 作用:註冊帳號並寄驗證信  
 
 #### 登入
-程式為  
+網址對應(`bballApp/bballApp/urls.py`):  
+```python
+path('login/', login)
+```
+操作資料(`bballApp/mainsite/views.py`): login函式  
+輸出模板: `bballApp/templates/login.html`  
 作用:登入會員  
-//TODO做法  
 
 #### 登出
 程式為  
