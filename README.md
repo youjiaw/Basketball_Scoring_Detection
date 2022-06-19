@@ -195,7 +195,7 @@ path('login/', login)
 若成功登入，將會重新導入到"/"，
 該網址對應的是`bballApp/mainsite/views.py`中的index函式  
 ```python
-path('/', index)
+path('', index)
 ```
 
 #### 登出
