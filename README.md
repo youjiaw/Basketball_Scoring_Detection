@@ -249,17 +249,29 @@ python img_effect.py
 
 ### 能力追蹤
 這部分使用者可以監控自己的運動情況1. 投籃準確度 2. 查詢歷史紀錄 3. 與其他使用者比較 4. 防懶(會顯示持續運動天數或連續沒有運動的天數)  
+輸出的base模板為`bballApp/templates/tracking_base.html`
 #### 顯示投籃準確度
-程式為 //TODO程式位置  
-作用: 顯示至目前為止的投籃準確度曲線  
-//TODO做法
+網址對應(`bballApp/bballApp/urls.py`):  
+```python
+path('tracking/', tracking),
+```
+操作資料: `bballApp/mainsite/views.py`中的tracking函式  
+輸出模板: `bballApp/templates/tracking.html`  
+作用: 顯示至目前為止的投籃準確度折線圖  
+
+在.html中插入程式碼區段，在此區段中撰寫畫出折線圖的程式碼。  
+其中，  
+drawBorder()函式代表畫出x軸和y軸，  
+drawLine()函式代表畫出折線圖的線，  
+drawBlock()函式代表畫出折線圖的點和點的值以及x軸的資訊，  
+draw_yinfo()函式代表劃出y軸的資訊。  
 
 #### 顯示歷史紀錄
 程式為 //TODO程式位置  
 作用: 同標題  
 //TODO做法  
 
-#### 比較
+#### 與其他使用者比較
 程式為//TODO程式位置  
 作用:可以比較 1. 持續天數 2. 平均投籃準確度  
 //TODO做法  
