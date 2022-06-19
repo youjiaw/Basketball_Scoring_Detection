@@ -165,14 +165,14 @@ result
 
 ### 註冊與登入、登出
 #### 註冊  
-使用django-registration-redux套件，再在.html或.txt中寫好要顯示的內容，  
+使用django-registration-redux套件，再在.html或.txt中寫好要顯示的內容  
 每個檔案和相對應的作用如下：  
-registration_form.html: 顯示註冊表單的網頁  
-registration_complete.html: 填寫完註冊表單按下送出之後顯示的訊息畫面  
-activation_complete.html: 當帳號註冊完成並順利啟用時會顯示的畫面  
-activate.html: 當帳號啟用失敗時會顯示的畫面  
-activation_email.txt: 在寄送啟用信時使用的信件內容  
-activation_email_subject.txt: 在寄送啟用信時使用的信件主旨  
+`bballApp/templates/registration/registration_form.html`: 顯示註冊表單的網頁  
+`bballApp/templates/registration/registration_complete.html`: 填寫完註冊表單按下送出之後顯示的訊息畫面  
+`bballApp/templates/registration/activation_complete.html`: 當帳號註冊完成並順利啟用時會顯示的畫面  
+`bballApp/templates/registration/activate.html: 當帳號啟用失敗時會顯示的畫面  
+`bballApp/templates/registration/activation_email.txt`: 在寄送啟用信時使用的信件內容  
+`bballApp/templates/registration/activation_email_subject.txt`: 在寄送啟用信時使用的信件主旨  
 作用:註冊帳號並寄驗證信  
 //TODO做法  
 
