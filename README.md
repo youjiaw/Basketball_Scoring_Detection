@@ -203,7 +203,8 @@ path('', index)
 if request.user.is_authenticated:
 ```
 如果是的話將剛剛取得的變數渲染到homepage_login.html，  
-否則渲染到homepage_logout.html  
+否則渲染到homepage_logout.html。  
+(兩者皆繼承homepage_base.html)  
 
 #### 登出
 網址對應(`bballApp/bballApp/urls.py`):  
