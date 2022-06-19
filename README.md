@@ -173,8 +173,11 @@ result
 `bballApp/templates/registration/activate.html`: 當帳號啟用失敗時會顯示的畫面  
 `bballApp/templates/registration/activation_email.txt`: 在寄送啟用信時使用的信件內容  
 `bballApp/templates/registration/activation_email_subject.txt`: 在寄送啟用信時使用的信件主旨  
+並利用在urls.py中加入以下程式碼來定義連結。  
+```python
+path('accounts/', include('registration.backends.default.urls'))
+```
 作用:註冊帳號並寄驗證信  
-//TODO做法  
 
 #### 登入
 程式為  
