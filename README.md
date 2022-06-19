@@ -255,7 +255,7 @@ python img_effect.py
 path('tracking/', tracking),
 ```
 操作資料: `bballApp/mainsite/views.py`中的tracking函式  
-輸出模板: `bballApp/templates/tracking.html`(繼承自`bballApp/templates/tracking_base.html`)  
+輸出模板: `bballApp/templates/tracking.html`(繼承`bballApp/templates/tracking_base.html`)  
 作用: 顯示至目前為止的投籃準確度折線圖  
 
 在.html中插入程式碼區段，在此區段中撰寫畫出折線圖的程式碼。  
@@ -271,7 +271,7 @@ draw_yinfo()函式代表劃出y軸的資訊。
 path('history/', history),
 ```
 操作資料: `bballApp/mainsite/views.py`中的history函式  
-輸出模板: `bballApp/templates/history.html`(繼承自`bballApp/templates/tracking_base.html`)  
+輸出模板: `bballApp/templates/history.html`(繼承`bballApp/templates/tracking_base.html`)  
 作用: 顯示使用者目前為止上傳過的個人訓練影片和該影片的上傳日期、影片時長、準確度  
 
 在輸出模板上利用video tag顯示目前為止上傳過的個人訓練影片，  
@@ -279,15 +279,25 @@ path('history/', history),
 如果使用者的瀏覽器版本不支援影片輸出，畫面將會顯示"您的瀏覽器不支援此影片連結"   
 
 #### 與其他使用者比較
-程式為//TODO程式位置  
+網址對應(`bballApp/bballApp/urls.py`):  
+```python
+path('compare/<int:no>/', compare, name='compare-url'),
+```
+操作資料: `bballApp/mainsite/views.py`中的compare函式  
+輸出模板: `bballApp/templates/compare.html`(繼承`bballApp/templates/tracking_base.html`)  
 作用:可以比較 1. 持續天數 2. 平均投籃準確度  
-//TODO做法  
+
+使用url反解，若傳入的數為1，代表要比較平均準確度，  
+若傳入的數為2，代表要比較最長持續天數，  
+預設傳入的數為0，代表尚未選擇要比較的項目。  
+接著依照欲比較的項目從數字高到數字低輸出資料庫中的所有使用者名稱和對應的數值，  
+該資訊是從`bballApp/mainsite/views.py`中的compare函式取得，  
 
 #### 防懶功能
-程式為 //TODO程式位置  
 作用: 1. 告知使用者目前持續天數  2. 提醒使用者已經有幾天沒運動了  
-//TODO做法  
 
+該資訊是從`bballApp/mainsite/views.py`中的tracking函式取得，  
+並輸出在`bballApp/templates/tracking.html`  
 
 # 網頁操作說明
 ## 安裝教學 (如何進入網頁)
