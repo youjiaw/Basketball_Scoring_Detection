@@ -184,7 +184,7 @@ path('accounts/', include('registration.backends.default.urls'))
 ```python
 path('login/', login)
 ```
-操作資料(`bballApp/mainsite/views.py`): login函式  
+操作資料: `bballApp/mainsite/views.py`中的login函式  
 輸出模板: `bballApp/templates/login.html`  
 作用:登入會員  
 
