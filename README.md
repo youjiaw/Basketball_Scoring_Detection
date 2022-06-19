@@ -188,12 +188,22 @@ path('login/', login)
 輸出模板: `bballApp/templates/login.html`  
 作用:登入會員  
 
+先檢查表單的method是不是POST，再檢查表單的輸入持是否符合要求，  
+接著檢查輸入的使用者名稱和密碼是否相符，  
+最後檢查此user是否為active的狀態。  
+
 #### 登出
-程式為  
+網址對應(`bballApp/bballApp/urls.py`):  
+```python
+path('logout/', logout)
+```
+操作資料: `bballApp/mainsite/views.py`中的logout函式  
 作用:登出會員  
-//TODO做法
 
-
+先驗證使用者是否為登入狀態，再利用以下程式碼進行登出的動作
+```python
+auth.logout(request)
+```
 
 ### 上傳頁面
 可以上傳 1. 想要剪輯精華的比賽影片  2. 個人訓練影片，剪輯完成後可自行加入特效  
