@@ -192,6 +192,12 @@ path('login/', login)
 接著檢查輸入的使用者名稱和密碼是否相符，  
 最後檢查此user是否為active的狀態。  
 
+若成功登入，將會重新導入到"/"，
+該網址對應的是`bballApp/mainsite/views.py`中的index函式  
+```python
+path('/', index)
+```
+
 #### 登出
 網址對應(`bballApp/bballApp/urls.py`):  
 ```python
