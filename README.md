@@ -188,7 +188,8 @@ path('login/', login)
 輸出模板: `bballApp/templates/login.html`  
 作用:登入會員  
 
-先檢查表單的method是不是POST，再檢查表單的輸入持是否符合要求，  
+先檢查表單的method是不是POST，  
+再檢查表單的輸入持是否符合要求，  
 接著檢查輸入的使用者名稱和密碼是否相符，  
 最後檢查此user是否為active的狀態。  
 
@@ -202,9 +203,9 @@ path('', index)
 ```python
 if request.user.is_authenticated:
 ```
-如果是的話將剛剛取得的變數渲染到homepage_login.html，  
-否則渲染到homepage_logout.html。  
-(兩者皆繼承homepage_base.html)  
+如果是的話將剛剛取得的變數渲染到`bballApp/templates/homepage_login.html`，  
+否則渲染到`bballApp/templates/homepage_logout.html`。  
+(兩者皆繼承`bballApp/templates/homepage_base.html`)  
 
 #### 登出
 網址對應(`bballApp/bballApp/urls.py`):  
