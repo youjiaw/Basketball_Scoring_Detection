@@ -197,11 +197,13 @@ path('login/', login)
 ```python
 path('', index)
 ```
-在index函式中，會取得天氣和相關賽事的資訊，  
+在index函式中，會取得天氣和相關賽事的資訊並存在變數中，  
 接著判斷的使用者是否為登入狀態。
 ```python
 if request.user.is_authenticated:
 ```
+如果是的話將剛剛取得的變數渲染到homepage_login.html
+否則渲染到homepage_logout.html
 
 #### 登出
 網址對應(`bballApp/bballApp/urls.py`):  
